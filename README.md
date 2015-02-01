@@ -5,18 +5,17 @@
 [heroku]: http://surprisebnb.herokuapp.com
 
 ## Minimum Viable Product
-Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
+Flux-capacitr is an clone of AirBNB built on Rails and Backbone, with the twist that
+instead of reviewing listings by location, listings are seen randomly with the location hidden.
+When a user books a listing, the location is revealed. Users can:
 
 - [x] Create accounts
 - [x] Create sessions (log in)
-- [x] Create blogs
-- [x] Create blog posts
-- [x] Tag blog posts
-- [x] View blogs and posts
-- [x] Subscribe to blogs
-- [x] View a feed of subscribed blogs
-- [x] Search for blogs by title
-- [x] Search for posts by tag
+- [x] Create Listings
+  [x] Search Listings via Price, type of location (Urban, Suburban, Rural)
+- [x] View Random Listing
+  [x] View Confirmation Page, with location of listing revealed
+  [x] Have user show page with upcoming bookings listed
 
 ## Design Docs
 * [View Wireframes][views]
