@@ -12,10 +12,10 @@ When a user books a listing, the location is revealed. Users can:
 - [x] Create accounts
 - [x] Create sessions (log in)
 - [x] Create Listings
-  [x] Search Listings via Price, type of location (Urban, Suburban, Rural)
+- [x] Search Listings via Price, type of location (Urban, Suburban, Rural)
 - [x] View Random Listing
-  [x] View Confirmation Page, with location of listing revealed
-  [x] Have user show page with upcoming bookings listed
+- [x] View Confirmation Page, with location of listing revealed
+- [x] Have user show page with upcoming bookings listed
 
 ## Design Docs
 * [View Wireframes][views]
