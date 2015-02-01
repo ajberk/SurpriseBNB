@@ -1,8 +1,8 @@
-# Flux-capacitr
+# SurpriseBNB
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: http://surprisebnb.herokuapp.com
 
 ## Minimum Viable Product
 Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
@@ -85,4 +85,3 @@ that will display matching blogs in one column and matching posts in another.
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
-
