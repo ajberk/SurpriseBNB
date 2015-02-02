@@ -5,7 +5,7 @@
 [heroku]: http://surprisebnb.herokuapp.com
 
 ## Minimum Viable Product
-Flux-capacitr is an clone of AirBNB built on Rails and Backbone, with the twist that
+SurpriseBNB is a clone of AirBNB built on Rails and Backbone, with the twist that
 instead of reviewing listings by location, listings are seen randomly with the location hidden.
 When a user books a listing, the location is revealed. Users can:
 
