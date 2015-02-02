@@ -9,13 +9,13 @@ SurpriseBNB is a clone of AirBNB built on Rails and Backbone, with the twist tha
 instead of reviewing listings by location, listings are seen randomly with the location hidden.
 When a user books a listing, the location is revealed. Users can:
 
-- [x] Create accounts
-- [x] Create sessions (log in)
-- [x] Create Listings
-- [x] Search Listings via Price, type of location (Urban, Suburban, Rural)
-- [x] View Random Listing
-- [x] View Confirmation Page, with location of listing revealed
-- [x] Have user show page with upcoming bookings listed
+- [ ] Create accounts
+- [ ] Create sessions (log in)
+- [ ] Create Listings
+- [ ] Search Listings via Price, type of location (Urban, Suburban, Rural), dates available
+- [ ] View Random Listing
+- [ ] View Confirmation Page, with location of listing revealed
+- [ ] Have user show page with upcoming bookings listed
 
 ## Design Docs
 * [View Wireframes][views]
