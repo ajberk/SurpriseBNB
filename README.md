@@ -28,17 +28,18 @@ When a user books a listing, the location is revealed. Users can:
 
 ### Phase 1: User Authentication, Basic Blogs and Posts (~1 day)
 I will implement user authentication in Rails based on the practices learned at
-App Academy. By the end of this phase, users will be able to create blogs and
-posts using simple text forms in Rails views. The most important part of this
+App Academy. By the end of this phase, users will be able to create listings using
+simple text forms in Rails views. The most important part of this
 phase will be pushing the app to Heroku and ensuring that everything works
 before moving on to phase 2.
 
 [Details][phase-one]
 
 ### Phase 2: JSON API and First Backbone Views (~2 days)
-I will add API routes to serve blog and post data as JSON, then add Backbone
+I will add API routes to serve listing data as JSON, then add Backbone
 models and collections that fetch data from those routes. By the end of this
-phase, the existing Rails views will have been ported over to Backbone.
+phase, the existing Rails views will have been ported over to Backbone. The user
+should be able to see a random listing.
 
 [Details][phase-two]
 
@@ -47,37 +48,33 @@ I plan to use third-party libraries to add functionality to the `PostForm` and
 `PostShow` views in this phase. First I'll need to add a Markdown editor to the
 `PostForm`, and make sure that the Markdown is properly escaped and formatted in
 the `PostShow` view. I also plan to integrate Filepicker for file upload so
-users can add images to blog posts.
+users can add images to listings posts. Ideally, when the description of a listing
+is created, the app will automatically censor words that will give away location
 
 [Details][phase-three]
 
-### Phase 4: User Feeds (~1-2 days)
-I'll start by adding a `feed` route that uses the `current_user`'s
-`subscribed_blogs` association to serve a list of blog posts ordered
-chronologically. On the Backbone side, I'll make a `FeedPosts` collection that
-fetches from the new route, then create a `FeedShow` view that uses the new
-collection. Ultimately, this will be the page users see after logging in.
+### Phase 4: User Home Page (~1 day)
+I'll update the post listing page revealed after a user has booked the listing.
+This will include the original listing with location words revealed and a map
+of the location.
 
 [Details][phase-four]
 
-### Phase 5: Searching for Blogs and Posts (~2 days)
-I'll need a `search` route that accepts a query in the params. The controller
-action will run two queries: one to find blogs where the `title` matches
-the search term, and another to find posts where one of their associated `Tag`s
-matches the search term. In Backbone, I plan to implement a `SearchResults` view
-that will display matching blogs in one column and matching posts in another.
+### Phase 5: User Home Page (~1-2 days)
+I'll make a users home page, where it displays a list of upcoming trips for the user.
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] Activity history for posts (e.g. likes, reblogs, taggings)
-- [x] Custom urls for blogs
-- [x] 'Like' button and counter for `PostShow` view
-- [x] Pagination of the `FeedShow`, `SearchShow`, and `BlogShow` views
-- [ ] Post types with distinct views (image posts, quote posts, etc)
-- [ ] Reblogging
+- [ ] Comments from users who have been to listing, also censoring location words until
+the listing has been booked.
+- [ ] URLS for listings changing so a user can not access a listing directly
+(ie skipping the random listing part of the website)
+- [ ] Nearby airport listings shown once listing has been booked
+- [ ] Display wikipedia information on location once listing has been booked
+- [ ] Star ratings for listings
 - [ ] Support for multiple open sessions
-- [x] User avatars
+- [ ] User avatars
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
