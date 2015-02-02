@@ -6,8 +6,8 @@
 ## Listing Form
 ![listing_form]
 
-## Blog Show
-![blog-show]
+## Listing Show
+![listing_form]
 
 ## Listing Show Revealed
 ![listing_reveal_show]
