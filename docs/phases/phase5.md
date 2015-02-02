@@ -1,4 +1,4 @@
-# Phase 5: Searching for Blogs and Posts
+### Phase 5: User Home Page (~1 days)
 
 ## Rails
 ### Models
@@ -13,12 +13,9 @@ Api::PostsController (search)
 ### Models
 
 ### Collections
-* SearchBlogs
-* SearchPosts
+* UsersListings
 
 ### Views
-* BlogSearchItem
-* SearchShow (composite view, contains BlogSearchItem and PostShow subviews)
+* UsersShow (composite view, contains ListingsShow subviews)
 
 ## Gems/Libraries
-

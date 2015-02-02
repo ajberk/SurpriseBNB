@@ -4,18 +4,17 @@
 ### Models
 
 ### Controllers
-Api::PostsController (feed)
+Api::ListingsController (feed)
 
 ### Views
-posts/feed.json.jbuilder
+revealedListings/Listings.json.jbuilder
 
 ## Backbone
 ### Models
 
 ### Collections
-* FeedPosts
 
 ### Views
-* FeedShow (composite view, contains PostShow subviews)
+* RevealedListings
 
 ## Gems/Libraries

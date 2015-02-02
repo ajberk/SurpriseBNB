@@ -29,9 +29,9 @@ When a user books a listing, the location is revealed. Users can:
 ### Phase 1: User Authentication, Basic Blogs and Posts (~1 day)
 I will implement user authentication in Rails based on the practices learned at
 App Academy. By the end of this phase, users will be able to create listings using
-simple text forms in Rails views. The most important part of this
-phase will be pushing the app to Heroku and ensuring that everything works
-before moving on to phase 2.
+simple text forms in Rails views. User should be able to comment on listings
+ The most important part of this phase will be pushing the app to Heroku and
+ensuring that everything works before moving on to phase 2.
 
 [Details][phase-one]
 
@@ -43,7 +43,7 @@ should be able to see a random listing.
 
 [Details][phase-two]
 
-### Phase 3: Editing and Displaying Posts (~2 days)
+### Phase 3: Editing and Displaying Listings (~2 days)
 I plan to use third-party libraries to add functionality to the `PostForm` and
 `PostShow` views in this phase. First I'll need to add a Markdown editor to the
 `PostForm`, and make sure that the Markdown is properly escaped and formatted in
@@ -60,14 +60,12 @@ of the location.
 
 [Details][phase-four]
 
-### Phase 5: User Home Page (~1-2 days)
+### Phase 5: User Home Page (~1 days)
 I'll make a users home page, where it displays a list of upcoming trips for the user.
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] Comments from users who have been to listing, also censoring location words until
-the listing has been booked.
 - [ ] URLS for listings changing so a user can not access a listing directly
 (ie skipping the random listing part of the website)
 - [ ] Nearby airport listings shown once listing has been booked
