@@ -53,7 +53,7 @@ is created, the app will automatically censor words that will give away location
 
 [Details][phase-three]
 
-### Phase 4: User Home Page (~1 day)
+### Phase 4: Revealed Listing Page (~1 day)
 I'll update the post listing page revealed after a user has booked the listing.
 This will include the original listing with location words revealed and a map
 of the location.
