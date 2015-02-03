@@ -1,4 +1,4 @@
-### Phase 5: User Home Page (~1 days)
+### Phase 6: User Home Page (~1 days)
 
 ## Rails
 ### Models
