@@ -1,21 +1,25 @@
-# Phase 3: Editing and Displaying Listings
+# Phase 3: Searching Listings
 
 ## Rails
 ### Models
 
 ### Controllers
+Api::ListingsController (create, destroy, index, show)
 
 ### Views
+* listing/index.json.jbuilders
 
 ## Backbone
 ### Models
+* Listing (parses nested `Comments` association)
+* Comments
 
 ### Collections
+* Listings
+* Comments
 
 ### Views
-* PostForm
+* UserShow (empty for now)
+* ListingShow
 
 ## Gems/Libraries
-* Filepicker
-* Markdown-js
-* Bootstrap Markdown

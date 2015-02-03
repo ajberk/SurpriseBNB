@@ -38,12 +38,18 @@ ensuring that everything works before moving on to phase 2.
 ### Phase 2: JSON API and First Backbone Views (~2 days)
 I will add API routes to serve listing data as JSON, then add Backbone
 models and collections that fetch data from those routes. By the end of this
-phase, the existing Rails views will have been ported over to Backbone. The user
-should be able to see a random listing.
+phase, the existing Rails views will have been ported over to Backbone.
+
 
 [Details][phase-two]
+### Phase 3: Searching Listings(~1 day)
+I will implement the ability for users to search listings based on price, country of orgin,
+and dates available. The user should be able to see a random listing with their specified
+parameters.
 
-### Phase 3: Editing and Displaying Listings (~2 days)
+[Details][phase-three]
+
+### Phase 4: Editing and Displaying Listings (~2 days)
 I plan to use third-party libraries to add functionality to the `PostForm` and
 `PostShow` views in this phase. First I'll need to add a Markdown editor to the
 `PostForm`, and make sure that the Markdown is properly escaped and formatted in
@@ -51,19 +57,20 @@ the `PostShow` view. I also plan to integrate Filepicker for file upload so
 users can add images to listings posts. Ideally, when the description of a listing
 is created, the app will automatically censor words that will give away location
 
-[Details][phase-three]
-
-### Phase 4: Revealed Listing Page (~1 day)
-I'll update the post listing page revealed after a user has booked the listing.
-This will include the original listing with location words revealed and a map
-of the location.
-
 [Details][phase-four]
 
-### Phase 5: User Home Page (~1 days)
-I'll make a users home page, where it displays a list of upcoming trips for the user.
+### Phase 5: Revealed Listing Page and maps (~1-2 days)
+I'll update the post listing page revealed after a user has booked the listing.
+This will include the original listing with location words revealed and a map
+of the location. The map on the search page will have all listings pinned and when a country
+is specified as a place the user would be willing to go, that country should light up on the map
 
 [Details][phase-five]
+
+### Phase 6: User Home Page (~1 days)
+I'll make a users home page, where it displays a list of upcoming trips for the user.
+
+[Details][phase-six]
 
 ### Bonus Features (TBD)
 - [ ] URLS for listings changing so a user can not access a listing directly
@@ -73,9 +80,11 @@ I'll make a users home page, where it displays a list of upcoming trips for the 
 - [ ] Star ratings for listings
 - [ ] Support for multiple open sessions
 - [ ] User avatars
+- [ ] Let users narrow their search parameters (ie states, near land feature...)
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
+[phase-six]: ./docs/phases/phase 6

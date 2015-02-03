@@ -3,8 +3,8 @@
 ## Rails
 ### Models
 * User
-* Blog
-* Post
+* Listing
+* Comments
 
 ### Controllers
 * UsersController (create, new)

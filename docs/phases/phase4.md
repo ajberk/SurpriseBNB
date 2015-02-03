@@ -1,13 +1,11 @@
-# Phase 4: User Feeds
+# Phase 3: Editing and Displaying Listings
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::ListingsController (feed)
 
 ### Views
-revealedListings/Listings.json.jbuilder
 
 ## Backbone
 ### Models
@@ -15,6 +13,9 @@ revealedListings/Listings.json.jbuilder
 ### Collections
 
 ### Views
-* RevealedListings
+* ListingForm
 
 ## Gems/Libraries
+* Filepicker
+* Markdown-js
+* Bootstrap Markdown

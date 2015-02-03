@@ -1,21 +1,20 @@
-### Phase 5: User Home Page (~1 days)
+# Phase 4: User Feeds
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (search)
-Api::PostsController (search)
+Api::ListingsController (feed)
 
 ### Views
+revealedListings/Listings.json.jbuilder
 
 ## Backbone
 ### Models
 
 ### Collections
-* UsersListings
 
 ### Views
-* UsersShow (composite view, contains ListingsShow subviews)
+* RevealedListings
 
 ## Gems/Libraries
