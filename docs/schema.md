@@ -20,6 +20,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 listing_id  | integer   | not null, foreign key (references Listing)
+body        | text      | not null,
 
 
 ## users
