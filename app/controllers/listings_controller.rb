@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
       redirect_to listings_url(@listing)
     else
       flash.now[:errors] = listing.errors.full_messages
-      render: new
+      render :new
     end
   end
 
