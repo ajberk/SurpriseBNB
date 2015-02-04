@@ -3,8 +3,8 @@ class Listing < ActiveRecord::Base
             :title,
             :start_date,
             :end_date,
-            :country:
-            :city:
+            :country,
+            :city,
             :street_address,
             :zipcode,
             :details,
