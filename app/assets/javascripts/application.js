@@ -16,6 +16,7 @@
 //= require underscore
 //= require backbone
 //= require surprise_bnb_app
+//= require jquery.serializeJSON
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

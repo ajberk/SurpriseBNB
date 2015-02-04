@@ -4,7 +4,15 @@ window.SurpriseBNBApp = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    var listings = new SurpriseBNBApp.Collections.Listings();
+    listings.fetch();
+    var $rootEl = $("#content");
+    new SurpriseBNBApp.Routers.Router({
+      listings: listings,
+      $rootEl: $rootEl
+    })
+    Backbone.history.start()
+
   }
 };
 
