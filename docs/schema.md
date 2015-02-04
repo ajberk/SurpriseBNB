@@ -4,14 +4,14 @@
 column name   | data type | details
 ------------  |-----------|-----------------------
 id            | integer   | not null, primary key
-owner_id      | integer   | not null, foreign key (references users)
+user_id       | integer   | not null, foreign key (references users)
 title         | string    | not null
 start_date    | date      | not null
 end_date      | date      | not null
 coutry        | string    | not null
 city          | string    | not null
 street_address| string  | not null
-zip_code      | integer    | not null
+zipcode      | integer    | not null
 details       | text       | not null
 
 
