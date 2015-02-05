@@ -19,7 +19,6 @@ SurpriseBNBApp.Views.CommentForm = Backbone.View.extend({
     event.preventDefault();
     data = this.$el.serializeJSON();
     var that = this;
-    debugger
     this.model.save(data, {
       success: function() {
         that.collection.add(that.model, {merge: true})
