@@ -1,5 +1,22 @@
 <h1><%= listing.escape("title") %></h1>
 
+<ul>
+  <li>
+    Available from <%=listing.escape("start_date") %> to <%=listing.escape("end_date") %>
+  </li>
+  <li>
+    Address: <%=listing.escape("street_address") %> <br>
+    <%=listing.escape("city") %>,<%=listing.escape("country") %>
+    <%=listing.escape("zipcode") %>
+  </li>
+  <br><br><br>
+    <li>
+      <%=listing.escape("details") %>
+    </li>
+</ul>
+
+
+
 
 <h3>New Comment</h3>
 <form class= "comment-form">
