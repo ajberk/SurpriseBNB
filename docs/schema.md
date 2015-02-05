@@ -13,6 +13,7 @@ city          | string    | not null
 street_address| string  | not null
 zipcode      | integer    | not null
 details       | text       | not null
+price         | float      | not null
 
 
 ## comments

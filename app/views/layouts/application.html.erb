@@ -19,6 +19,7 @@
 <% else %>
   <%= link_to current_user.username, user_url(current_user) %>
   <%= button_to "Sign Out", session_url, :method => :delete %>
+  <a href="/#">Home</a>
 <% end %>
 
 

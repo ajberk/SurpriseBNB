@@ -1,5 +1,5 @@
 class Api::ListingsController <Api::ApiController
-  
+
   def index
     @listing = Listing.all
     render json: @listing
@@ -22,6 +22,6 @@ class Api::ListingsController <Api::ApiController
   private
   def listing_params
     self.params.require(:listing).permit(:user_id, :title, :start_date, :end_date,
-    :country, :city, :street_address, :zipcode, :details)
+    :country, :city, :street_address, :zipcode, :details, :price)
   end
 end
