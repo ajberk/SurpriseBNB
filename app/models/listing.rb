@@ -11,6 +11,6 @@ class Listing < ActiveRecord::Base
             presence: true
 
   belongs_to :user
-  has_many :commments
+  has_many :comments
 
 end
