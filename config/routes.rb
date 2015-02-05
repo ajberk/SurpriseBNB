@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :listings
-    resources :comments, only: [:new, :create, :destroy]
+    resources :comments, only: [:new, :create, :destroy, :index]
   end
 end

@@ -1,4 +1,5 @@
 class Api::ListingsController <Api::ApiController
+  
   def index
     @listing = Listing.all
     render json: @listing

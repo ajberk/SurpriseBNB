@@ -1,7 +1,12 @@
 class Api::CommentsController < Api::ApiController
-  
+
+  def index
+    @comment = Comment.all
+    render json: @comment
+  end
+
   def create
-    listing = current_user.listings.find(params[:id])
+    listing = current_user.listings.find(params[:listing_id])
     @comment = listing.comments.new(comment_params)
     if @comment.save
       render json: @comment
@@ -16,6 +21,6 @@ class Api::CommentsController < Api::ApiController
 
   private
   def comment_params
-    self.params.require(:listing).permit(:body)
+    self.params.require(:comment).permit(:body)
   end
 end

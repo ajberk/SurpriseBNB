@@ -31,7 +31,8 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   },
 
   renderCommentForm: function () {
-    var comment = new SurpriseBNBApp.Models.Comment()
+    var comment = new SurpriseBNBApp.Models.Comment();
+    comment.set({"listing_id": this.model.id});
     var view = new SurpriseBNBApp.Views.CommentForm({
       collection: this.comments,
       model: comment
