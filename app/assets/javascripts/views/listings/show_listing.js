@@ -7,7 +7,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   initialize: function(options) {
     this.comments = this.model.comments();
     this.listenTo(this.model, "sync", this.render)
-    this.listenTo(this.comments, 'add', this.addComment);
+    this.listenTo(this.comments, 'add', this.render)
   },
 
   render: function(){
@@ -18,7 +18,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.renderComments();
     return this;
   },
-
+  
   renderComments: function () {
     this.model.comments().each(this.addComment.bind(this));
   },
