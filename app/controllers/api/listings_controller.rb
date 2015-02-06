@@ -22,7 +22,11 @@ class Api::ListingsController <Api::ApiController
   def search
     listings = Listing.search_listings(search_params)
     random_listing = listings.sample
-    render json: random_listing
+    if random_listing.nil?
+      render json: random_listing, status: :unprocessable_entity
+    else
+      render json: random_listing
+    end
   end
 
   private

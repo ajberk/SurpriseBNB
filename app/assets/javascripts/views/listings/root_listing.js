@@ -1,5 +1,6 @@
 SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
   template: JST["listings/root"],
+  templateNotFound: JST["listings/notfound"],
 
   initialize: function(options) {
   },
@@ -7,6 +8,13 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
   render: function(){
     this.$el.html(this.template());
     this.$(".countries").chosen({width: '200px'});
+    return this;
+  },
+
+  renderNotFound: function() {
+    debugger
+    var $error = this.$('.error')
+    $error.html(this.templateNotFound());
     return this;
   },
 
@@ -19,7 +27,6 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
     var that = this;
     var $target = $(event.currentTarget);
     var data = $target.serializeJSON();
-    debugger
 
     // ajax stuff, pass in the data
     $.ajax({
@@ -34,7 +41,8 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
       },
 
       error: function() {
-        console.log("invalid search parameters")
+        debugger
+        that.renderNotFound()
       }
     })
 
