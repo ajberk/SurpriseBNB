@@ -1,3 +1,22 @@
-<h1>ROOT PAGE</h1>
+<div class="jumbotron">
+  <h1>SurpriseBNB</h1>
+</div>
 
-<a href="#listings/new">Make a new listing!!!!</a>
+<div class="col-md-8"></div>
+<div class="col-md-4">
+  <h2 >Search For a Listing</h2>
+
+<form class= "search form-inline search-form">
+
+  <label for="min_price" class="col-sm-5">Minimum Price:</label>
+  $<input type="text" name="search[min_price]" id="min_price" class="form-control">
+  <br><br>
+
+  <label for="max_price" class="col-sm-5">Maximum Price:</label>
+  $<input type="text" name="search[max_price]" id="max_price" class="form-control">
+  <br><br>
+
+  <label for="search_button" class="col-sm-1"></label>
+  <input id="search_button"type="submit" class="search-listings btn btn-primary" value="Search!" method= "get" class="form-control">
+</form>
+</div>

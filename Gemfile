@@ -9,11 +9,9 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'backbone-on-rails'
 gem 'bcrypt'
-gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
-gem 'spring',        group: :development
 gem 'newrelic_rpm'
 
 
@@ -28,6 +26,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'byebug'
+  gem 'spring'
 end
 
 group :production do

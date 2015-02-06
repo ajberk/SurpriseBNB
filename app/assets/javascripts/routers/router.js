@@ -29,7 +29,9 @@ SurpriseBNBApp.Routers.Router = Backbone.Router.extend({
   },
 
   root: function() {
-    var view = new SurpriseBNBApp.Views.ListingsRoot()
+    var view = new SurpriseBNBApp.Views.ListingsRoot({
+      collection: this.listings
+    })
     this._swapView(view)
   },
 

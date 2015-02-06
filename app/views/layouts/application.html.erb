@@ -2,25 +2,21 @@
 <html>
 <head>
   <title>SurpriseBNBApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "application" , media: "all" %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <%= render partial: "layouts/header"%>
 </head>
-<body>
+
+
 
 <% if flash[:errors] %>
-  <p><%= flash[:errors] %></p>
+  <p><%= flash[:errors] %> </p>
 <% end %>
 
 
-<% if current_user.nil? %>
-  <%= link_to "Sign Up", new_user_url %>
-  <%= link_to "Sign In", new_session_url %>
-<% else %>
-  <%= link_to current_user.username, user_url(current_user) %>
-  <%= button_to "Sign Out", session_url, :method => :delete %>
-  <a href="/#">Home</a>
-<% end %>
+
+<body>
 
 
 <%= yield %>

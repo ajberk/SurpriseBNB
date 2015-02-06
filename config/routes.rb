@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
   root to: 'root#root'
   resources :users, except: [:index] do
-    # resources :listings, only: [:create, :new]
   end
-  # resources :listings, except: [:create, :new, :index]
   resource :session, only: [:new, :create, :destroy]
 
 
   namespace :api, defaults: { format: :json } do
-    resources :listings
+    resources :listings do
+      #custom route for search
+      collection do
+        get 'search' => 'listings#search', :as => 'search_listing'
+      end
+    end
+
     resources :comments, only: [:new, :create, :destroy, :index]
   end
 end

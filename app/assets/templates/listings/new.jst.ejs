@@ -1,34 +1,68 @@
 <h1>New Listing!</h1>
 
-<form>
+<form class= "new-form form-center">
+  <div class="form-group">
+    <label for="listing_title" class="col-sm-2 control-label">Title for listing:</label>
+    <div class="col-sm-10">
+      <input type= "text" name= "listing[title]" id="listing_title" class="form-control">
+    </div>
+  </div>
 
-  <label for="listing_title">Title for listing:</label>
-  <input type= "text" name= "listing[title]" id="listing_title">
+  <div class="form-group">
+    <label for="listing_price" class="col-sm-2 control-label" >Price Per Night:</label>
+    <div class="col-sm-10">
+      <input type="text" name="listing[price]"id = "listing_price" class="form-control">
+    </div>
+  </div>
 
-  <label for="listing_price">Price Per Night:</label>
-  <input type="text" name="listing[price]"id = "listing_price">
+  <div class="form-group">
+    <label for="listing_start_date" class="col-sm-2 control-label">Start Date:</label>
+    <div class="col-sm-10">
+      <input type= "date" name= "listing[start_date]" id= "listing_start_date" class="form-control">
+    </div>
+  </div>
 
-  <label for="listing_start_date">Start Date:</label>
-  <input type= "date" name= "listing[start_date]" id= "listing_start_date">
+  <div class="form-group">
+    <label for="listing_end_date" class="col-sm-2 control-label">End Date:</label>
+    <div class="col-sm-10">
+      <input type= "date" name= "listing[end_date]" id= "listing_end_date" class="form-control">
+    </div>
+  </div>
 
-  <label for="listing_end_date">End Date:</label>
-  <input type= "date" name= "listing[end_date]" id= "listing_end_date">
+  <div class="form-group">
+    <label for="listing_street_address" class="col-sm-2 control-label">Street Address:</label>
+    <div class="col-sm-10">
+      <input type="text" name="listing[street_address]" id="listing_street_address" class="form-control">
+    </div>
+  </div>
 
-  <label for="listing_street_address">Street Address:</label>
-  <input type="text" name="listing[street_address]" id="listing_street_address">
+  <div class="form-group">
+    <label for="listing_city" class="col-sm-2 control-label">City:</label>
+    <div class="col-sm-10">
+      <input type="text" name="listing[city]" id="listing_city" class="form-control">
+    </div>
+  </div>
 
-  <label for="listing_city">City</label>
-  <input type="text" name="listing[city]" id="listing_city">
+  <div class="form-group">
+    <label for="listing_zipcode" class="col-sm-2 control-label">Zipcode:</label>
+    <div class="col-sm-10">
+      <input type="text" name="listing[zipcode]" id="listing_zipcode" class="form-control">
+    </div>
+  </div>
 
-  <label for="listing_zipcode">Zipcode</label>
-  <input type="text" name="listing[zipcode]" id="listing_zipcode">
+  <div class="form-group">
+    <label for="listing_country" class="col-sm-2 control-label">Country:</label>
+    <div class="col-sm-10">
+      <input type="text" name="listing[country]" id="listing_country" class="form-control">
+    </div>
+  </div>
 
-  <label for="listing_country">Country:</label>
-  <input type="text" name="listing[country]" id="listing_country">
+  <div class="form-group">
+    <label for="listing_details" class="col-sm-2 control-label">Description:</label>
+    <div class="col-sm-10">
+      <textarea name="listing[details]" id= "listing_details" rows="8" cols="40" class="form-control"></textarea>
+    </div>
+  </div>
 
-  <label for="listing_details">Description:</label>
-  <textarea name="listing[details]" id= "listing_details" rows="8" cols="40"></textarea>
-
-
-  <input type="submit" class="new-listing" value= "Post Listing!">
+  <input type="submit" class="new-listing btn btn-primary" value= "Post Listing!">
 </form>

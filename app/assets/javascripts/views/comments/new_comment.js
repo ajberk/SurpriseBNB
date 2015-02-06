@@ -11,6 +11,7 @@ SurpriseBNBApp.Views.CommentForm = Backbone.View.extend({
     return this;
   },
 
+
   events: {
     "click .new-comment": "submit"
   },
