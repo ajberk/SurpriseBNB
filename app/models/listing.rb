@@ -14,9 +14,17 @@ class Listing < ActiveRecord::Base
   has_many :comments
 
   def self.search_listings(search_params)
+    if search_params[:countries].empty?
+      countries = nil
+    else
+      countries = search_params[:countries]
+    end
 
-    data = self.where(:price => search_params[:min_price]..search_params[:max_price])
-    return data
+    self.
+      where(:price => search_params[:min_price]..search_params[:max_price]).
+      where("start_date >= ?", search_params[:start_date]).
+      where("end_date <= ?", search_params[:end_date]).
+      where("country in (?) OR ? is NULL", countries, countries)
   end
 
 end

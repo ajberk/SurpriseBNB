@@ -6,6 +6,7 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
 
   render: function(){
     this.$el.html(this.template());
+    this.$(".countries").chosen({width: '200px'});
     return this;
   },
 
@@ -16,8 +17,9 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
   submit: function(event){
     event.preventDefault();
     var that = this;
-    var $target = $(event.currentTarget)
-    var data = $target.serializeJSON()
+    var $target = $(event.currentTarget);
+    var data = $target.serializeJSON();
+    debugger
 
     // ajax stuff, pass in the data
     $.ajax({

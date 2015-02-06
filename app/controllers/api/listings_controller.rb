@@ -20,10 +20,7 @@ class Api::ListingsController <Api::ApiController
   end
 
   def search
-    # min_price = search_params(:min_price)
-    # max_price = search_params(:max_price)
     listings = Listing.search_listings(search_params)
-    # is listings an array? I hope so...
     random_listing = listings.sample
     render json: random_listing
   end
@@ -35,6 +32,6 @@ class Api::ListingsController <Api::ApiController
   end
 
   def search_params
-    self.params.require(:search).permit(:min_price, :max_price)
+    self.params.require(:search).permit(:min_price, :max_price, :start_date, :end_date, :countries => [])
   end
 end
