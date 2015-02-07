@@ -12,7 +12,6 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
   },
 
   renderNotFound: function() {
-    debugger
     var $error = this.$('.error')
     $error.html(this.templateNotFound());
     return this;
@@ -41,7 +40,6 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
       },
 
       error: function() {
-        debugger
         that.renderNotFound()
       }
     })

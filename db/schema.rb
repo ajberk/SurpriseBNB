@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205170737) do
+ActiveRecord::Schema.define(version: 20150207004004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150205170737) do
     t.integer  "zipcode",        null: false
     t.text     "details",        null: false
     t.float    "price"
+    t.string   "image_url"
   end
 
   add_index "listings", ["country"], name: "index_listings_on_country", using: :btree

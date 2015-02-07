@@ -9,8 +9,17 @@ SurpriseBNBApp.Views.ListingForm = Backbone.View.extend({
     }));
     return this;
   },
+
   events: {
-    "click .new-listing": "submit"
+    "click .new-listing": "submit",
+    "change input[type=filepicker]": "updateImage"
+  },
+
+  updateImage: function (event) {
+    var $target = $(event.currentTarget);
+    this.model.set('image_url', $target.val());
+    this.render();
+    // <!-- name="listing[images_attributes][image_url]" --> for the template
   },
 
   submit: function(event) {

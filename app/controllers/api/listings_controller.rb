@@ -36,6 +36,7 @@ class Api::ListingsController <Api::ApiController
   end
 
   def search_params
-    self.params.require(:search).permit(:min_price, :max_price, :start_date, :end_date, :countries => [])
+    self.params.require(:search).permit(:min_price, :max_price, :start_date,
+      :end_date, :image_url, :countries => [] )
   end
 end
