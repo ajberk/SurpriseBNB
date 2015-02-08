@@ -7,6 +7,8 @@ SurpriseBNBApp.Views.ListingForm = Backbone.View.extend({
     this.$el.html(this.template({
       listing: this.model
     }));
+    var $filePickerInput = this.$("input[type=filepicker]")
+    filepicker.constructWidget($filePickerInput[0])
     return this;
   },
 
