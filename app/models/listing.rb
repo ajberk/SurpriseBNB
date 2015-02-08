@@ -12,6 +12,7 @@ class Listing < ActiveRecord::Base
 
   belongs_to :user
   has_many :comments
+  has_many :images
 
   def self.search_listings(search_params)
     if search_params[:countries].empty?

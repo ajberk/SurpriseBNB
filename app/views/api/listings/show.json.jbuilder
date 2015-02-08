@@ -6,3 +6,7 @@ json.extract! @listing, :id, :title, :start_date, :end_date, :country, :city,
 json.comments @listing.comments do |comment|
   json.extract! comment, :id, :listing_id, :body
 end
+
+json.images @listing.images do |image|
+  json.extract! image, :id, :listing_id, :image_url
+end
