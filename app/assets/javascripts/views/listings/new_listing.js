@@ -30,8 +30,6 @@ SurpriseBNBApp.Views.ListingForm = Backbone.View.extend({
       return
     }
     var filePickerInput = $filePickerInput[0];
-    // filePickerInput.type = "filepicker";
-    // filepicker.constructWidget(filePickerInput);
   },
 
   pick: function () {

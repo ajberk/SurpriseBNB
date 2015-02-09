@@ -43,3 +43,7 @@ html, body, #map-canvas {
   min-height: 800px;
   overflow: hidden;
 }
+
+#map-canvas > div {
+  height: 500px;
+}
