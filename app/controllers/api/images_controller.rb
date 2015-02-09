@@ -12,6 +12,7 @@ class ImagesController < ApplicationController
       render json: @image
     else
       render error: @image.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   private
