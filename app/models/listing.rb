@@ -12,7 +12,7 @@ class Listing < ActiveRecord::Base
 
   belongs_to :user
   has_many :comments
-  has_many :images
+  has_many :images, inverse_of: :listing
 
   accepts_nested_attributes_for(:images) #look up options, makes setter method called images_attributes=
 

@@ -32,7 +32,7 @@ class Api::ListingsController <Api::ApiController
   private
   def listing_params
     self.params.require(:listing).permit(:user_id, :title, :start_date, :end_date,
-    :country, :city, :street_address, :zipcode, :details, :price)
+    :country, :city, :street_address, :zipcode, :details, :price, images_attributes: [:image_url])
   end
 
   def search_params

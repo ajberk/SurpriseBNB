@@ -3,6 +3,7 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
   templateNotFound: JST["listings/notfound"],
 
   initialize: function(options) {
+    // this.renderMap()
   },
 
   render: function(){
@@ -16,6 +17,15 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
     $error.html(this.templateNotFound());
     return this;
   },
+   renderMap: function() {
+      // ONLY CALL THIS ONCE!
+       var mapOptions = {
+           center: { lat: 37.7833, lng: -122.4167},
+           zoom: 12
+        };
+
+        this._map = new google.maps.Map(this.el, mapOptions);
+    },
 
   events: {
     "submit form.search": "submit"
