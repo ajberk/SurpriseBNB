@@ -5,9 +5,18 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
   initialize: function(options) {
   },
 
+  attributes: {
+    id: "map-canvas"
+  },
+
+  events: {
+    "submit form.search": "submit"
+  },
+
   render: function(){
     this.$el.html(this.template());
     this.$(".countries").chosen({width: '200px'});
+    // this.renderMap()
     return this;
   },
 
@@ -17,8 +26,14 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
     return this;
   },
 
-  events: {
-    "submit form.search": "submit"
+  renderMap: function() {
+    // ONLY CALL THIS ONCE!
+    var mapOptions = {
+      center: { lat: 37.7833, lng: -122.4167},
+      zoom: 12
+    };
+
+    this._map = new google.maps.Map(this.el, mapOptions);
   },
 
   submit: function(event){

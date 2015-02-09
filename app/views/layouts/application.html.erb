@@ -10,6 +10,16 @@
   <script>
     filepicker.setKey('AutXH70ASy6vnElZ4Zmo5z');
   </script>
+
+  <% if Rails.env.production? %>
+    <% api_key = "key=AIzaSyB0x4omscGRhoMeM0stn9U6Hz2MnKCI7VI" %>
+  <% else %>
+    <% api_key = '' %>
+  <% end %>
+
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?<%= api_key %>"></script>
+
 </head>
 
 
