@@ -22,6 +22,6 @@ class ListingsController < ApplicationController
   private
   def listing_params
     self.params.require(:listing).permit(:user_id, :title, :start_date, :end_date,
-      :country, :city, :street_address, :zipcode, :details)
+      :country, :city, :street_address, :zipcode, :details, images_attributes: [:image_url])
   end
 end

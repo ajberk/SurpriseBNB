@@ -14,6 +14,8 @@ class Listing < ActiveRecord::Base
   has_many :comments
   has_many :images
 
+  accepts_nested_attributes_for(:images) #look up options, makes setter method called images_attributes=
+
   def self.search_listings(search_params)
     if search_params[:countries].empty?
       countries = nil

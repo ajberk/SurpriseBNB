@@ -39,5 +39,8 @@ SurpriseBNBApp.Routers.Router = Backbone.Router.extend({
     _currentView && _currentView.remove()
     var _currentView = view
     this.$rootEl.html(view.render().$el)
+    if(view.afterRender) {
+      view.afterRender();
+    }
   }
 });

@@ -7,49 +7,49 @@
   <div class="form-group">
     <label for="listing_title" class="col-sm-2 control-label">Title for listing:</label>
     <div class="col-sm-10">
-      <input type= "text" name= "listing[title]" id="listing_title" class="form-control">
+      <input type= "text" name= "listing[title]" id="listing_title" class="form-control" value= "Title">
     </div>
   </div>
 
   <div class="form-group">
     <label for="listing_price" class="col-sm-2 control-label" >Price Per Night:</label>
     <div class="col-sm-10">
-      <input type="text" name="listing[price]"id = "listing_price" class="form-control">
+      <input type="text" name="listing[price]"id = "listing_price" class="form-control" value= "10">
     </div>
   </div>
 
   <div class="form-group">
     <label for="listing_start_date" class="col-sm-2 control-label">Start Date:</label>
     <div class="col-sm-10">
-      <input type= "date" name= "listing[start_date]" id= "listing_start_date" class="form-control">
+      <input type= "date" name= "listing[start_date]" id= "listing_start_date" class="form-control" value = "2000-03-02">
     </div>
   </div>
 
   <div class="form-group">
     <label for="listing_end_date" class="col-sm-2 control-label">End Date:</label>
     <div class="col-sm-10">
-      <input type= "date" name= "listing[end_date]" id= "listing_end_date" class="form-control">
+      <input type= "date" name= "listing[end_date]" id= "listing_end_date" class="form-control" value="2010-04-02">
     </div>
   </div>
 
   <div class="form-group">
     <label for="listing_street_address" class="col-sm-2 control-label">Street Address:</label>
     <div class="col-sm-10">
-      <input type="text" name="listing[street_address]" id="listing_street_address" class="form-control">
+      <input type="text" name="listing[street_address]" id="listing_street_address" class="form-control" value= "address address address">
     </div>
   </div>
 
   <div class="form-group">
     <label for="listing_city" class="col-sm-2 control-label">City:</label>
     <div class="col-sm-10">
-      <input type="text" name="listing[city]" id="listing_city" class="form-control">
+      <input type="text" name="listing[city]" id="listing_city" class="form-control" value="city">
     </div>
   </div>
 
   <div class="form-group">
     <label for="listing_zipcode" class="col-sm-2 control-label">Zipcode:</label>
     <div class="col-sm-10">
-      <input type="text" name="listing[zipcode]" id="listing_zipcode" class="form-control">
+      <input type="text" name="listing[zipcode]" id="listing_zipcode" class="form-control" value= "12345">
     </div>
   </div>
 
@@ -58,7 +58,7 @@
     <div class="col-sm-10">
       <select id= "listing_country" name= "listing[country]" data-placeholder="Choose a Country..." class="countries form-control"  tabindex="-1">
         <option value=""></option>
-        <option value="United States">United States</option>
+        <option value="United States" selected>United States</option>
         <option value="United Kingdom">United Kingdom</option>
         <option value="Afghanistan">Afghanistan</option>
         <option value="Aland Islands">Aland Islands</option>
@@ -317,7 +317,7 @@
   <div class= "form-group-higher">
     <label for="listing_details" class="col-sm-2 control-label">Description:</label>
     <div class="col-sm-10">
-      <textarea name="listing[details]" id= "listing_details" rows="8" cols="40" class="form-control"></textarea>
+      <textarea name="listing[details]" id= "listing_details" rows="8" cols="40" class="form-control">cool description</textarea>
     </div>
   </div>
 
@@ -326,9 +326,10 @@
       <input
         type="filepicker"
         data-fp-mimetype="image/*"
-        name="listing[images_attributes][image_url]"
+        name="listing[images_attributes][0][image_url]"
         data-fp-button-text="Choose Images"
-        data-fp-button-class="btn btn-default">
+        data-fp-button-class="btn btn-default"
+        class="my-image-thing">
       </div>
   </div>
 

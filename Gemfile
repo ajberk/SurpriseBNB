@@ -14,9 +14,6 @@ gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
 gem 'newrelic_rpm'
 gem "figaro"
-gem 'filepicker-rails'
-
-
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'

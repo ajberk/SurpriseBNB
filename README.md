@@ -65,10 +65,6 @@ This will include the original listing with location words revealed and a map
 of the location. The map on the search page will have all listings pinned and when a country
 is specified as a place the user would be willing to go, that country should light up on the map
 
-http://www.dyngeometry.com/web/WorldRegion.aspx
-It will give you coordinates which you could use for PolyGone
-http://download.geonames.org/export/dump/
-
 [Details][phase-five]
 
 ### Phase 6: User Home Page (~1 days)

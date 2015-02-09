@@ -7,20 +7,35 @@ SurpriseBNBApp.Views.ListingForm = Backbone.View.extend({
     this.$el.html(this.template({
       listing: this.model
     }));
-    var $filePickerInput = this.$("input[type=filepicker]")
-    filepicker.constructWidget($filePickerInput[0])
+
     return this;
+  },
+
+  afterRender: function () {
+    setTimeout(function () {
+      this.installFilePicker();
+    }.bind(this), 0);
   },
 
   events: {
     "click .new-listing": "submit",
-    "change input[type=filepicker]": "updateImage"
+    "change .my-image-thing": "updateImage"
+  },
+
+  installFilePicker: function(){
+    var $filePickerInput = this.$(".my-image-thing")
+
+    if (!$filePickerInput.is(':visible')) {
+      return
+    }
+    var filePickerInput = $filePickerInput[0];
+    filePickerInput.type = "filepicker";
+    filepicker.constructWidget(filePickerInput);
   },
 
   updateImage: function (event) {
     var $target = $(event.currentTarget);
     this.model.set('image_url', $target.val());
-    this.render();
     // <!-- name="listing[images_attributes][image_url]" --> for the template
   },
 
