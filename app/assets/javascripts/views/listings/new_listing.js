@@ -12,14 +12,15 @@ SurpriseBNBApp.Views.ListingForm = Backbone.View.extend({
   },
 
   afterRender: function () {
-    setTimeout(function () {
-      this.installFilePicker();
-    }.bind(this), 0);
+    // setTimeout(function () {
+    //   this.installFilePicker();
+    // }.bind(this), 0);
   },
 
   events: {
     "click .new-listing": "submit",
-    "change .my-image-thing": "updateImage"
+    "click .my-image-thing": "pick"
+    // "change .my-image-thing": "updateImage"
   },
 
   installFilePicker: function(){
@@ -29,14 +30,30 @@ SurpriseBNBApp.Views.ListingForm = Backbone.View.extend({
       return
     }
     var filePickerInput = $filePickerInput[0];
-    filePickerInput.type = "filepicker";
-    filepicker.constructWidget(filePickerInput);
+    // filePickerInput.type = "filepicker";
+    // filepicker.constructWidget(filePickerInput);
+  },
+
+  pick: function () {
+    var that = this;
+    filepicker.pick({
+      mimetype: 'image/*'
+      },
+      function(Blob) {
+        var $input = $('<input type="hidden" name="listing[images_attributes][][image_url]">');
+        $input.val(Blob.url);
+        that.$('.image-group').append($input);
+        //create an image tag with src of Blob.url, append to page
+      },
+      function (FPError) {
+        console.log(FPError);
+      });
   },
 
   updateImage: function (event) {
     var $target = $(event.currentTarget);
     this.model.set('image_url', $target.val());
-    // <!-- name="listing[images_attributes][image_url]" --> for the template
+    this.render()
   },
 
   submit: function(event) {

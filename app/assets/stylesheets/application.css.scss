@@ -36,4 +36,10 @@ html, body, #map-canvas {
   height: 100%;
   margin: 0;
   padding: 0;
+
+}
+
+#map-canvas {
+  min-height: 800px;
+  overflow: hidden;
 }

@@ -1,15 +1,25 @@
-SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
+SurpriseBNBApp.Views.ListingsRoot = Backbone.CompositeView.extend({
   template: JST["listings/root"],
   templateNotFound: JST["listings/notfound"],
 
   initialize: function(options) {
-    // this.renderMap()
+    this.makeMapView()
   },
 
   render: function(){
+    console.log("root render");
     this.$el.html(this.template());
     this.$(".countries").chosen({width: '200px'});
+    this.attachSubviews();
     return this;
+  },
+
+
+  makeMapView: function() {
+    var view = new SurpriseBNBApp.Views.ListingsMap({});
+    this.mapView = view;
+    // view.render()
+    this.addSubview('#map-canvas', view);
   },
 
   renderNotFound: function() {
@@ -17,15 +27,6 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.View.extend({
     $error.html(this.templateNotFound());
     return this;
   },
-   renderMap: function() {
-      // ONLY CALL THIS ONCE!
-       var mapOptions = {
-           center: { lat: 37.7833, lng: -122.4167},
-           zoom: 12
-        };
-
-        this._map = new google.maps.Map(this.el, mapOptions);
-    },
 
   events: {
     "submit form.search": "submit"
