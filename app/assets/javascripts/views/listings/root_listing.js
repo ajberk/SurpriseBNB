@@ -8,11 +8,11 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.CompositeView.extend({
 
   afterRender: function () {
     this.mapResize();
+    this.renderSearchForm()
   },
 
   render: function(){
     this.$el.html(this.template());
-    this.$(".countries").chosen({width: '200px'});
     this.attachSubviews();
     return this;
   },
@@ -22,6 +22,11 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.CompositeView.extend({
     var view = new SurpriseBNBApp.Views.ListingsMap({});
     this.mapView = view;
     this.addSubview('#map-canvas', view);
+  },
+
+  renderSearchForm: function() {
+    var view = new SurpriseBNBApp.Views.SearchForm()
+    this.addSubview('.search-form', view)
   },
 
 

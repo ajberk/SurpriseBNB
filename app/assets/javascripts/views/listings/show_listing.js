@@ -16,6 +16,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   afterRender: function () {
     this.mapResize();
     this.renderCommentForm();
+    this.renderSearchForm()
   },
 
   makeMapView: function() {
@@ -32,8 +33,6 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.$el.html(this.hiddenTemplate({
       listing: this.model
     }));
-    debugger
-    this.renderComments();
     this.attachSubviews();
     return this;
   },
@@ -57,6 +56,16 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
       model: comment
     });
     this.addSubview('.comment-form', view);
+  },
+
+  renderSearchForm: function() {
+    var view = new SurpriseBNBApp.Views.SearchForm()
+    this.addSubview('.search-form', view)
+  },
+
+  renderSearchForm: function() {
+    var view = new SurpriseBNBApp.Views.SearchForm()
+    this.addSubview('.search-form', view)
   },
 
   renderFullTemplate: function() {

@@ -1,0 +1,5 @@
+-Make subviews for the form and for the individual images.
+-Fix comments
+
+-Make sure the hidden show page is correct
+-make nav bar and footer orange.
