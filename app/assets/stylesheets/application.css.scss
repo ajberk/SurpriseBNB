@@ -33,12 +33,16 @@
 }
 
 .jumbotron {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
 }
 
 .jumbo-small {
   padding-top: 1px;
+  padding-bottom: 1px;
+  border: 1px solid black;
+  text-align: center
 }
 html, body, #map-canvas {
   height: 100%;
@@ -48,9 +52,9 @@ html, body, #map-canvas {
 }
 
 #map-canvas {
-  min-height: 800px;
+  min-height: 500px;
   overflow: hidden;
-  border: 1px;
+  border: 1px solid black;
   padding: 1px;
 }
 
@@ -124,4 +128,18 @@ html, body, #map-canvas {
     padding: 2px;
     border: 1px solid #ccc;
     margin: 5px;
+}
+
+.footer {
+  text-align: right;
+  height: 100px;
+  padding-top: 50px;
+}
+
+body {
+  background: linear-gradient(white, skyblue, white);
+}
+
+.sub-title {
+  text-align: center;
 }
