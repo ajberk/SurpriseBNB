@@ -8,34 +8,44 @@
   <% } %>
 </div>
 
-<h1><%= listing.escape("title") %></h1>
+<div class="col-md-6 ">
+  <h1><%= listing.escape("title") %></h1>
 
-<ul>
-  <li>
-    Available from <%=listing.escape("start_date") %> to <%=listing.escape("end_date") %>
-  </li>
-  <li>
-    Price Per Night: <%=listing.escape("price") %>$
-  </li>
-  <li>
-    Address: <%=listing.escape("street_address") %> <br>
-    <%=listing.escape("city") %>,<%=listing.escape("country") %>
-    <%=listing.escape("zipcode") %>
-  </li>
-  <br><br><br>
+  <ul>
+    <li>
+      Available from <%=listing.escape("start_date") %> to <%=listing.escape("end_date") %>
+    </li>
+    <li>
+      Price Per Night: <%=listing.escape("price") %>$
+    </li>
+    <li>
+      Address: <%=listing.escape("street_address") %> <br>
+      <%=listing.escape("city") %>,<%=listing.escape("country") %>
+      <%=listing.escape("zipcode") %>
+    </li>
+    <br><br><br>
     <li>
       Description: <%=listing.escape("details") %>
     </li>
-</ul>
+  </ul>
 
 
 
 
-<h3>New Comment</h3>
-<div class= "comment-form">
+  <h3>New Comment</h3>
+  <div class= "comment-form"></div>
+
+  <h2>Comments</h2>
+  <ul class="comments"></ul>
 </div>
 
-<h2>Comments</h2>
-<ul class="comments">
+<div class="col-md-6 ">
+  <% if (listing.get("images")) { %>
+    <% for (var i = 1; i < listing.get("images").length; i++) { %>
+      <img class = "sub-img" src="<%=listing.get("images")[i].image_url%>" class="img-responsive">
+    <% } %>
+  <% } %>
 
-</ul>
+</div>
+
+<div id="map-canvas-show" style=" height:500px;" width= "<%= $(window).width() %>"></div>

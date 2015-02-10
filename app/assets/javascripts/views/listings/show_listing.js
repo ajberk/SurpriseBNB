@@ -8,14 +8,31 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.comments = this.model.comments();
     this.listenTo(this.model, "sync", this.render)
     this.listenTo(this.comments, 'add', this.render)
+    this.makeMapView()
+  },
+
+  afterRender: function () {
+    this.mapResize();
+    this.renderCommentForm();
+  },
+
+  makeMapView: function() {
+    var view = new SurpriseBNBApp.Views.ListingsMap({});
+    this.mapView = view;
+    this.addSubview('#map-canvas-show', view);
+  },
+
+  mapResize: function() {
+    google.maps.event.trigger(this.mapView._map, 'resize')
   },
 
   render: function(){
     this.$el.html(this.template({
       listing: this.model
     }));
-    this.renderCommentForm();
+
     this.renderComments();
+    this.attachSubviews();
     return this;
   },
 
