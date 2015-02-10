@@ -1,3 +1,13 @@
+<div class="jumbotron jumbo">
+  <h1>Surprise! You're going to <%= listing.escape("city") %>! </h1>
+</div>
+
+<div class="main-img-div">
+  <% if (listing.get("images")) { %>
+    <img class = "main-img" src="<%=listing.get("images")[0].image_url%>" class="img-responsive" width= "<%= $(window).width() %>"/>
+  <% } %>
+</div>
+
 <h1><%= listing.escape("title") %></h1>
 
 <ul>
