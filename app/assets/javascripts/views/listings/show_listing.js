@@ -1,13 +1,15 @@
 SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
-  template: JST["listings/show"],
+  hiddenTemplate: JST["listings/hidden_show"],
+  fullTemplate: JST["listings/full_show"],
 
   events: {
+    "click .book_it": "renderFullTemplate",
   },
 
   initialize: function(options) {
     this.comments = this.model.comments();
     this.listenTo(this.model, "sync", this.render)
-    this.listenTo(this.comments, 'add', this.render)
+    this.listenTo(this.comments, 'add', this.renderFullTemplate)
     this.makeMapView()
   },
 
@@ -27,10 +29,10 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   },
 
   render: function(){
-    this.$el.html(this.template({
+    this.$el.html(this.hiddenTemplate({
       listing: this.model
     }));
-
+    debugger
     this.renderComments();
     this.attachSubviews();
     return this;
@@ -55,5 +57,16 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
       model: comment
     });
     this.addSubview('.comment-form', view);
+  },
+
+  renderFullTemplate: function() {
+    console.log(this.model);
+    this.$el.html(this.fullTemplate({
+      listing: this.model
+    }));
+
+    this.renderComments();
+    this.attachSubviews();
+    return this;
   }
 });
