@@ -38,14 +38,20 @@ SurpriseBNBApp.Views.ListingForm = Backbone.View.extend({
       mimetype: 'image/*'
       },
       function(Blob) {
-        var $input = $('<input type="hidden" name="listing[images_attributes][][image_url]">');
-        $input.val(Blob.url);
-        that.$('.image-group').append($input);
-        //create an image tag with src of Blob.url, append to page
+        that.pickSuccess(Blob)
       },
       function (FPError) {
         console.log(FPError);
       });
+  },
+
+  pickSuccess: function(Blob) {
+    var $input = $('<input type="hidden" name="listing[images_attributes][][image_url]">');
+    $input.val(Blob.url);
+    this.$('.image-group').append($input);
+    var $image = $('<img src ='+ Blob.url + '>')
+    $('div.image-div').append($image)
+    //create an image tag with src of Blob.url, append to page
   },
 
   updateImage: function (event) {
