@@ -35,6 +35,7 @@
 .jumbotron {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  background-color: white;
 
 }
 
@@ -112,18 +113,15 @@ html, body, #map-canvas {
 .main-img-div {
   height: 400px;
   overflow: hidden;
+  border: 1px solid black;
 }
 
 .main-img {
   width: 100%;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
 }
 
 .sub-img {
-    height: 200px;
+    height: 195px;
     max-width: 300px;
     padding: 2px;
     border: 1px solid #ccc;
@@ -142,4 +140,14 @@ body {
 
 .sub-title {
   text-align: center;
+}
+
+.text-item {
+  background-color: white;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 2px;
+}
+
+.text-item-text {
 }
