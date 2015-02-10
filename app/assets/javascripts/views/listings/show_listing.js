@@ -1,22 +1,24 @@
 SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   hiddenTemplate: JST["listings/hidden_show"],
   fullTemplate: JST["listings/full_show"],
+  imageTemplate: JST["images/main_image"],
 
   events: {
-    "click .book_it": "renderFullTemplate",
+    "click #book-listing": "renderFullTemplate",
   },
 
   initialize: function(options) {
     this.comments = this.model.comments();
     this.listenTo(this.model, "sync", this.render)
-    this.listenTo(this.comments, 'add', this.renderFullTemplate)
+    this.listenTo(this.comments, 'add', this.renderComments)
     this.makeMapView()
   },
 
   afterRender: function () {
     this.mapResize();
     this.renderCommentForm();
-    this.renderSearchForm()
+    this.renderSearchForm();
+    this.renderMainImage();
   },
 
   makeMapView: function() {
@@ -33,7 +35,9 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.$el.html(this.hiddenTemplate({
       listing: this.model
     }));
+    this.renderComments();
     this.attachSubviews();
+    this.renderMainImage();
     return this;
   },
 
@@ -68,6 +72,13 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.addSubview('.search-form', view)
   },
 
+  renderMainImage: function() {
+    this.$('div.main-img-div').html(this.imageTemplate({
+      listing: this.model
+    }));
+    return this;
+  },
+
   renderFullTemplate: function() {
     console.log(this.model);
     this.$el.html(this.fullTemplate({
@@ -75,6 +86,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     }));
 
     this.renderComments();
+    this.renderMainImage();
     this.attachSubviews();
     return this;
   }
