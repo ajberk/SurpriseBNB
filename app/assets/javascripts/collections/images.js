@@ -1,4 +1,4 @@
-SurpriseBNBApp.Collections.Comments = Backbone.Collection.extend({
+SurpriseBNBApp.Collections.Images = Backbone.Collection.extend({
   model: SurpriseBNBApp.Models.Image,
   url: "/api/comments",
 
@@ -6,12 +6,14 @@ SurpriseBNBApp.Collections.Comments = Backbone.Collection.extend({
     var model = this.get(id);
     var that = this;
     if (!model) {
-      model = new SurpriseBNBApp.Models.Comment({id: id})
+      model = new SurpriseBNBApp.Models.Image({id: id})
       model.fetch({
         success: function() {
           that.add(model)
         }
       })
+    } else {
+      model.fetch();
     }
     return model
   }

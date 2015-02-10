@@ -9,6 +9,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
 
   initialize: function(options) {
     this.comments = this.model.comments();
+    this.imagez = this.model.imagez();
     this.listenTo(this.model, "sync", this.render)
     this.listenTo(this.comments, 'add', this.renderComments)
     this.makeMapView()
@@ -38,6 +39,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.renderComments();
     this.attachSubviews();
     this.renderMainImage();
+    this.renderImages();
     return this;
   },
 
@@ -52,6 +54,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.addSubview('.comments', view);
   },
 
+
   renderCommentForm: function () {
     var comment = new SurpriseBNBApp.Models.Comment();
     comment.set({"listing_id": this.model.id});
@@ -60,6 +63,18 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
       model: comment
     });
     this.addSubview('.comment-form', view);
+  },
+
+  renderImages: function() {
+    this.model.imagez().each(this.addImage.bind(this));
+  },
+
+  addImage: function(image) {
+    var view = new SurpriseBNBApp.Views.ImageShow({
+      collection: this.imagez,
+      model: image
+    });
+    this.addSubview('.image-div', view);
   },
 
   renderSearchForm: function() {

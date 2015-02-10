@@ -12,6 +12,8 @@ SurpriseBNBApp.Collections.Comments = Backbone.Collection.extend({
           that.add(model)
         }
       })
+    } else {
+      model.fetch();
     }
     return model
   }
