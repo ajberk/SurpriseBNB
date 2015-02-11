@@ -12,7 +12,4 @@ SurpriseBNBApp.Views.ListingsMap = Backbone.CompositeView.extend({
     this._map = new google.maps.Map(this.el, mapOptions);
     return this;
   },
-
-
-
 });

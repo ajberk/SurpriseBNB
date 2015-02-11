@@ -43,7 +43,6 @@ class Listing < ActiveRecord::Base
       countries = search_params[:countries]
     end
 
-    # fail
     self.
       where(:price => search_params[:min_price]..search_params[:max_price]).
       where("start_date <= ?", search_params[:start_date]).

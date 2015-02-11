@@ -18,6 +18,7 @@
 //= require surprise_bnb_app
 //= require jquery.serializeJSON
 //= require jquery.chosen
+//= require jquery.justifiedGallery.min.js
 //= require_tree ../templates
 //= require_tree ./utils
 //= require_tree ./models

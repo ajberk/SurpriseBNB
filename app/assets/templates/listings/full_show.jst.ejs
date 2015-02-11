@@ -24,7 +24,8 @@
   <div class = "text-item">
     <h4 class= "sub-sub-title">Address: <%=listing.escape("street_address") %> <br>
       <%=listing.escape("city") %>,<%=listing.escape("country") %>
-      <%=listing.escape("zipcode") %></h4>
+      <%=listing.escape("zipcode") %>
+      </h4>
   </div>
 
   <div class = "text-item">
@@ -42,13 +43,10 @@
   <ul class="comments"></ul>
 </div>
 
-<div class="col-md-6 ">
-  <% if (listing.get("images")) { %>
-    <% for (var i = 1; i < listing.get("images").length; i++) { %>
-      <img class = "sub-img" src="<%=listing.get("images")[i].image_url%>" class="img-responsive">
-    <% } %>
-  <% } %>
 
+<div class="col-md-6">
+  <div id = "mygallery" class="image-div"></div>
 </div>
+
 
 <div id="map-canvas-show" style=" height:500px;" width= "<%= $(window).width() %>"></div>

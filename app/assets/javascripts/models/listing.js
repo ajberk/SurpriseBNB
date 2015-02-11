@@ -11,14 +11,14 @@ SurpriseBNBApp.Models.Listing = Backbone.Model.extend({
     return this._comments;
   },
 
-  imagez: function () {
-    if (!this._imagez) {
-      this._imagez = new SurpriseBNBApp.Collections.Images([], {
-        imagez: this
+  images: function () {
+    if (!this._images) {
+      this._images = new SurpriseBNBApp.Collections.Images([], {
+        images: this
       });
     }
 
-    return this._comments;
+    return this._images;
   },
 
   parse: function (response) {
@@ -27,9 +27,9 @@ SurpriseBNBApp.Models.Listing = Backbone.Model.extend({
       delete response.comments;
     }
 
-    if (response.imagez) {
-      this.imagez().set(response.imagez, { parse: true });
-      delete response.imagez;
+    if (response.images) {
+      this.images().set(response.images, { parse: true });
+      delete response.images;
     }
 
     return response;
