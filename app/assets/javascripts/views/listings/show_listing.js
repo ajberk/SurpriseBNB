@@ -4,7 +4,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   imageTemplate: JST["images/main_image"],
 
   events: {
-    "click #book-listing": "renderFullTemplate",
+    "click #book-listing": "renderSurprise",
   },
 
   initialize: function(options) {
@@ -82,11 +82,6 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.addSubview('.search-form', view)
   },
 
-  renderSearchForm: function() {
-    var view = new SurpriseBNBApp.Views.SearchForm()
-    this.addSubview('.search-form', view)
-  },
-
   renderMainImage: function() {
     console.log('rendering main image');
     console.log(this.model.images().first().get('image_url'));
@@ -96,20 +91,10 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     return this;
   },
 
-  renderFullTemplate: function() {
+  renderSurprise: function() {
     var view = new SurpriseBNBApp.Views.ListingSurprise({
       model: this.model
     });
     $('body').append(view.render().$el)
-    // this.$el.html(this.fullTemplate({
-    //   listing: this.model
-    // }));
-    //
-    // this.renderComments();
-    // this.attachSubviews();
-    // setTimeout(function () {
-    //   this.$("#mygallery").justifiedGallery();
-    // }.bind(this), 10);
-    // return this;
   }
 });
