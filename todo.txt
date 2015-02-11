@@ -1,5 +1,6 @@
--Make sure the hidden show page is correct
 
+
+-search seems to be broken for all pages,
 -fix modal, make it redirect to the users show page. This will have a list of users upcoming vacations
 This list will include dates your gonna travel, the title, address and price per night.
 Should be sorted by start date of vacation.
@@ -10,3 +11,8 @@ Should be sorted by start date of vacation.
 
 
 -make nav bar and footer orange.
+
+
+QUESTIONS:
+  Why are the maps broken?
+  How do I get 

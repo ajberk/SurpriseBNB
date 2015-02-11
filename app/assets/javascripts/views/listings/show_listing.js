@@ -13,12 +13,12 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.listenTo(this.comments, 'add', this.addComment)
     this.listenTo(this.model.images(), 'add', this.addImage)
     this.listenTo(this.model,'sync', this.renderMainImage)
-    this.makeMapView()
+    this.makeMapView();
+    this.renderSearchForm();
   },
 
   afterRender: function () {
     this.mapResize();
-    this.renderSearchForm();
     this.renderCommentForm();
   },
 
@@ -87,13 +87,13 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   },
 
   renderSearchForm: function() {
-    var view = new SurpriseBNBApp.Views.SearchForm()
+    var view = new SurpriseBNBApp.Views.SearchForm({
+      collection: this.collection
+    })
     this.addSubview('.search-form', view)
   },
 
   renderMainImage: function() {
-    console.log('rendering main image');
-    console.log(this.model.images().first().get('image_url'));
     this.$('div.main-img-div').html(this.imageTemplate({
       listing: this.model
     }));

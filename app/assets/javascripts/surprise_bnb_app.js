@@ -16,6 +16,6 @@ window.SurpriseBNBApp = {
   }
 };
 
-$(document).ready(function(){
-  SurpriseBNBApp.initialize();
-});
+// $(document).ready(function(){
+//   SurpriseBNBApp.initialize();
+// });

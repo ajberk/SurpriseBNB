@@ -3,10 +3,12 @@ SurpriseBNBApp.Views.ListingSurprise = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.makeMapView();
+    var that = this;
     setTimeout(function () {
       $('html').on('click', function () {
         $('html').off('click');
         console.log("The viwe is closing")
+        that.teardown();
       });
     }, 42)
   },
@@ -41,5 +43,12 @@ SurpriseBNBApp.Views.ListingSurprise = Backbone.CompositeView.extend({
 
   mapResize: function() {
     google.maps.event.trigger(this.mapView._map, 'resize')
+  },
+
+  teardown: function() {
+    // this.$el.html('modal', null);
+    this.remove();
+    console.log(SurpriseBNBApp.currentUserId);
+    Backbone.history.navigate("#users/"+SurpriseBNBApp.currentUserId, {trigger: true})
   },
 });

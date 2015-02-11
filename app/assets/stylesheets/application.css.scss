@@ -59,7 +59,6 @@ html, body, #map-canvas {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden
 
 }
 
@@ -164,12 +163,13 @@ body {
 }
 .surprise-content {
   z-index: 200;
-  height: 700px;
+  height: 500px;
   width: 700px;
   position: fixed;
   top: 10px;
   left: 50px;
   right: 50px;
+  bottom: 10px;
   background-color: white;
   display: block;
   margin: 0 auto;

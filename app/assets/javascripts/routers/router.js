@@ -7,8 +7,9 @@ SurpriseBNBApp.Routers.Router = Backbone.Router.extend({
   routes: {
     "": "root",
     "listings/new": "newListing",
+    "listings/:id/edit": "editListing",
     "listings/:id": "showListing",
-    "listings/:id/edit": "editListing"
+    "users/:id": "showUser"
   },
 
   newListing: function() {
@@ -23,13 +24,21 @@ SurpriseBNBApp.Routers.Router = Backbone.Router.extend({
   showListing: function(id) {
     var listing = this.listings.getOrFetch(id)
     var view = new SurpriseBNBApp.Views.ListingShow({
-      model: listing
+      model: listing,
+      collection: this.listings
     });
     this._swapView(view)
   },
 
   root: function() {
     var view = new SurpriseBNBApp.Views.ListingsRoot({
+      collection: this.listings
+    })
+    this._swapView(view)
+  },
+
+  showUser: function () {
+    var view = new SurpriseBNBApp.Views.UserShow({
       collection: this.listings
     })
     this._swapView(view)

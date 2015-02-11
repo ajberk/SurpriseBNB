@@ -9,11 +9,12 @@ SurpriseBNBApp.Views.SearchForm = Backbone.CompositeView.extend({
   render: function() {
     console.log("form show");
     this.$el.html(this.template());
+    this.$(".countries").chosen({width: '200px'});
     return this;
   },
 
   onRender: function () {
-    this.$(".countries").chosen({width: '200px'});
+    this.render();
   },
 
   renderNotFound: function() {
@@ -39,7 +40,7 @@ SurpriseBNBApp.Views.SearchForm = Backbone.CompositeView.extend({
         //response will have data corresponding to listing in the listings collection
         var listing = new SurpriseBNBApp.Models.Listing(response)
         that.collection.add(listing, {merge: true})
-        Backbone.history.navigate("#listings/" + listing.id, {trigger: true})
+          Backbone.history.navigate("#listings/" + listing.id, {trigger: true})
       },
 
       error: function() {

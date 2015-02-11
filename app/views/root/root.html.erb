@@ -1,3 +1,11 @@
 <div id="content">
   <h1>ROOT PAGE!!!!!</h1>
 </div>
+
+
+<script charset="utf-8">
+  $(document).ready(function(){
+    SurpriseBNBApp.currentUserId = <%= current_user.id %>
+    SurpriseBNBApp.initialize();
+  });
+</script>

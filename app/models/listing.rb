@@ -37,9 +37,7 @@ class Listing < ActiveRecord::Base
   accepts_nested_attributes_for(:images) #look up options, makes setter method called images_attributes=
 
   def self.search_listings(search_params)
-    if search_params[:countries].empty?
-      countries = nil
-    else
+    if search_params[:countries]
       countries = search_params[:countries]
     end
 
