@@ -1,5 +1,12 @@
--Make subviews for the form and for the individual images.
--Fix comments
-
 -Make sure the hidden show page is correct
+
+-fix modal, make it redirect to the users show page. This will have a list of users upcoming vacations
+This list will include dates your gonna travel, the title, address and price per night.
+Should be sorted by start date of vacation.
+
+-make the map on the root page show all of the listings.
+-make the map on the modal show the listing that it is showing.
+-fix up styling of the sign in and sign up pages
+
+
 -make nav bar and footer orange.

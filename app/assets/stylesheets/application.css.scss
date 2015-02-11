@@ -59,6 +59,7 @@ html, body, #map-canvas {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden
 
 }
 
@@ -163,13 +164,15 @@ body {
 }
 .surprise-content {
   z-index: 200;
-  height: 500px;
-  width: 500px;
+  height: 700px;
+  width: 700px;
   position: fixed;
   top: 10px;
   left: 50px;
   right: 50px;
   background-color: white;
+  display: block;
+  margin: 0 auto;
 }
 .surprise-backdrop {
   position: fixed;
@@ -179,6 +182,18 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.sub-image{
+  width:50%;
+  height:50%;
+  -webkit-transition:.4s all;
+}
+
+#book-listing {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
 }
 //
 // .image-show {

@@ -18,8 +18,8 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
 
   afterRender: function () {
     this.mapResize();
-    this.renderCommentForm();
     this.renderSearchForm();
+    this.renderCommentForm();
   },
 
   makeMapView: function() {
@@ -33,6 +33,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   },
 
   render: function(){
+    console.log("listing show");
     this.$el.html(this.hiddenTemplate({
       listing: this.model
     }));
@@ -40,7 +41,15 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.attachSubviews();
     setTimeout(function () {
       this.$("#mygallery").justifiedGallery();
-    }.bind(this), 0)
+    }.bind(this), 10)
+
+    // $('.sub-img').hover(function(){
+    //   $(this).css({width:"200%",height:"200%"});
+    // },function(){
+    //   $(this).css({width:"100%",height:"100%"});
+    // });
+
+    this.onRender();
     return this;
   },
 

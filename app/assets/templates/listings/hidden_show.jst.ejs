@@ -5,6 +5,7 @@
 <div class="main-img-div"></div>
 
 <div class="col-md-6">
+  <br>
   <div class="list-group">
     <a class="list-group-item active">
       <h1 class="list-group-item-heading"><%= listing.escape("title") %></h1>
@@ -26,13 +27,15 @@
 
 </div>
 
-
 <div class="col-md-6">
+
+  <br>
+  <input id= "book-listing" type="submit" class="btn btn-primary" value="Book It!" method= "get" class="form-control">
+
+
   <div id = "mygallery" class="image-div"></div>
   <div class="jumbotron jumbo-small">
     <h2 >Not For You? Search Again!</h2>
   </div>
   <div class= "search-form"></div>
 </div>
-
-<input id= "book-listing" type="submit" class="btn btn-primary" value="Book It!" method= "get" class="form-control">
