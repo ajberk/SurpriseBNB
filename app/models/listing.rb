@@ -45,7 +45,7 @@ class Listing < ActiveRecord::Base
       where(:price => search_params[:min_price]..search_params[:max_price]).
       where("start_date <= ?", search_params[:start_date]).
       where("end_date >= ?", search_params[:end_date]).
-      where("country in (?) OR ? is NULL", countries, countries)
+      where("country in (?)", countries)
   end
 
 end

@@ -43,7 +43,6 @@ SurpriseBNBApp.Views.RootMap = Backbone.CompositeView.extend({
       lat,
       lng
     );
-    debugger
 
     var marker = new google.maps.Marker({
       position: latLng,

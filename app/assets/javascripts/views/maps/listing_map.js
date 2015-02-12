@@ -1,31 +1,38 @@
 SurpriseBNBApp.Views.ListingsMap = Backbone.CompositeView.extend({
   template: JST["listings/map"],
 
-  initialize: function () {
+  initialize: function (options) {
     this._markers = {};
-    this.listenTo(this.collection, 'add', this.addMarker);
+    this.listenTo(this.model, 'sync', this.render);
   },
 
-
   render: function() {
+    if(!this.model.get("updated_at")) {
+      return this;
+    }
     // ONLY CALL THIS ONCE!
-    var mapOptions = {
-      center: { lat: this.lat, lng: this.lng},
-      zoom: 9,
-      height: 500,
-
-    };
-    this._map = new google.maps.Map(this.el, mapOptions);
+    this.addMarker(this.model, function(resp) {
+      var lat = resp.results[0].geometry.location.lat
+      var lng = resp.results[0].geometry.location.lng
+      var mapOptions = {
+        center: { lat: lat, lng: lng},
+        zoom: 9,
+        height: 500,
+      };
+      this._map = new google.maps.Map(this.el, mapOptions);
+    }.bind(this));
     return this;
   },
 
   // Event handlers
-  addMarker: function (listing) {
+  addMarker: function (listing, callback) {
     var data = listing.get("street_address") + " " + listing.get("city") + " " + listing.get("zipcode")
     $.ajax({
       url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + data,
       dataType: 'json',
       success: function(response) {
+        callback(response);
+
         this.successCallback(listing, response)
       }.bind(this)
     });
@@ -43,7 +50,6 @@ SurpriseBNBApp.Views.ListingsMap = Backbone.CompositeView.extend({
       this.lat,
       this.lng
     );
-    debugger
 
     var marker = new google.maps.Marker({
       position: latLng,

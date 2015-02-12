@@ -36,7 +36,9 @@ SurpriseBNBApp.Views.ListingSurprise = Backbone.CompositeView.extend({
   },
 
   makeMapView: function() {
-    var view = new SurpriseBNBApp.Views.ListingsMap({});
+    var view = new SurpriseBNBApp.Views.ListingsMap({
+      model: this.model
+    });
     this.mapView = view;
     this.addSubview('#map-canvas', view);
   },
