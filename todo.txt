@@ -4,7 +4,6 @@
 This list will include dates your gonna travel, the title, address and price per night.
 Should be sorted by start date of vacation.
 
--COMMENTS BROKE!
 
 -make the map on the root page show all of the listings. DONE EXCEPT FOR WHEN YOU NAVIGATE BACK
 

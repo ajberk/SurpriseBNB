@@ -15,11 +15,11 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.listenTo(this.model,'sync', this.renderMainImage)
     this.makeMapView();
     this.renderSearchForm();
+    this.renderCommentForm();
   },
 
   afterRender: function () {
     this.mapResize();
-    this.renderCommentForm();
   },
 
   makeMapView: function() {
