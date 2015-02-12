@@ -22,10 +22,11 @@ SurpriseBNBApp.Routers.Router = Backbone.Router.extend({
   },
 
   showListing: function(id) {
+    SurpriseBNBApp.Bookings.fetch()
     var listing = this.listings.getOrFetch(id)
     var view = new SurpriseBNBApp.Views.ListingShow({
       model: listing,
-      collection: this.listings
+      collection: this.listings,
     });
     this._swapView(view)
   },

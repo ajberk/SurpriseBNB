@@ -86,11 +86,19 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   },
 
   renderSurprise: function() {
-    SurpriseBNBApp.current_pending_booking.save({"listing_id": this.model.id})
-    debugger
-    var view = new SurpriseBNBApp.Views.ListingSurprise({
-      model: this.model
+   var idData = {"listing_id": this.model.id}
+   SurpriseBNBApp.current_pending_booking.set(idData)
+   debugger
+   SurpriseBNBApp.current_pending_booking.save({}, {
+     success: function() {
+       debugger
+       SurpriseBNBApp.Bookings.add(SurpriseBNBApp.current_pending_booking)
+     }
+   })
+
+  var view = new SurpriseBNBApp.Views.ListingSurprise({
+    model: this.model,
     });
-    $('body').append(view.render().$el)
+  $('body').append(view.render().$el)
   }
 });

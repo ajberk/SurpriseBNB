@@ -1,13 +1,12 @@
 SurpriseBNBApp.Views.ListingSurprise = Backbone.CompositeView.extend({
   template: JST["listings/surprise"],
 
-  initialize: function () {
+  initialize: function (options) {
     this.makeMapView();
     var that = this;
     setTimeout(function () {
       $('html').on('click', function () {
         $('html').off('click');
-        console.log("The viwe is closing")
         that.teardown();
       });
     }, 42)
@@ -48,9 +47,7 @@ SurpriseBNBApp.Views.ListingSurprise = Backbone.CompositeView.extend({
   },
 
   teardown: function() {
-    // this.$el.html('modal', null);
     this.remove();
-    console.log(SurpriseBNBApp.currentUserId);
     Backbone.history.navigate("#users/"+SurpriseBNBApp.currentUserId, {trigger: true})
   },
 });

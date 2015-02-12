@@ -32,7 +32,6 @@ SurpriseBNBApp.Views.SearchForm = Backbone.CompositeView.extend({
     var that = this;
     var $target = $(event.currentTarget);
     var data = $target.serializeJSON();
-    debugger
     var start_date = data.search.start_date;
     var end_date = data.search.end_date;
     //WHERE THE SEARCH DATA IS!!!!!
@@ -48,9 +47,7 @@ SurpriseBNBApp.Views.SearchForm = Backbone.CompositeView.extend({
           "start_date": start_date,
           "end_date": end_date,
         }
-        debugger
         SurpriseBNBApp.current_pending_booking = new SurpriseBNBApp.Models.Booking(bookingData);
-        //response will have data corresponding to listing in the listings collection
         var listing = new SurpriseBNBApp.Models.Listing(response)
         that.collection.add(listing, {merge: true})
           Backbone.history.navigate("#listings/" + listing.id, {trigger: true})

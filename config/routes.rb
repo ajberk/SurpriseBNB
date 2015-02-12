@@ -12,7 +12,7 @@ Rails.application.routes.draw do
         get 'search' => 'listings#search', :as => 'search_listing'
       end
     end
-    resources :bookings, only: [:index]
+    resources :bookings, only: [:create, :index]
 
     resources :comments, only: [:new, :create, :destroy, :index]
   end
