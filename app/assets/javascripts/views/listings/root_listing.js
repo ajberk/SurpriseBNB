@@ -3,8 +3,8 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.CompositeView.extend({
   templateNotFound: JST["listings/notfound"],
 
   initialize: function(options) {
-    this.makeMapView()
     this.renderSearchForm();
+    this.makeMapView()
   },
 
   afterRender: function () {

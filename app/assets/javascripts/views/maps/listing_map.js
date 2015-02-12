@@ -54,7 +54,7 @@ SurpriseBNBApp.Views.ListingsMap = Backbone.CompositeView.extend({
     var marker = new google.maps.Marker({
       position: latLng,
       map: this._map,
-      title: "A Great Property You Might Stay In!"
+      address: listing.get("street_address") + ", " + listing.get("city") + ", " + listing.get("zipcode")
     });
 
     google.maps.event.addListener(marker, 'click', function (event) {
@@ -77,7 +77,7 @@ SurpriseBNBApp.Views.ListingsMap = Backbone.CompositeView.extend({
     // the window?)
 
     var infoWindow = new google.maps.InfoWindow({
-      content: marker.title
+      content: marker.address
     });
 
     infoWindow.open(this._map, marker);

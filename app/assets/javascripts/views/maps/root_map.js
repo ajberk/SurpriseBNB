@@ -1,9 +1,12 @@
 SurpriseBNBApp.Views.RootMap = Backbone.CompositeView.extend({
   template: JST["listings/map"],
 
-  initialize: function () {
+  initialize: function (options) {
     this._markers = {};
-    this.listenTo(this.collection, 'add', this.addMarker);
+    this.listenTo(this.collection, 'add sync', this.addMarker);
+    Backbone.history.on("route", function(listing){
+      this.collection.each(this.addMarker(listing))
+    }.bind(this));
   },
 
   render: function() {

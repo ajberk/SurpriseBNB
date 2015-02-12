@@ -25,14 +25,17 @@
   type="hidden"
   name="authenticity_token"
   value="<%= form_authenticity_token %>">
-
+  <div class = "jumbotron">
+    <h1>Sign up.</h1>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-md-offset-5 col-md-3">
         <div class="form-login">
-          <h4>Sign up</h4>
+          <label for= "user_username">Username</label>
           <input type="text" id="userName" name= "user[username]" class="form-control input-sm chat-input" placeholder="username" />
         </br>
+        <label for= "user_password">Password</label>
         <input type="password" id="userPassword" name= "user[password]" class="form-control input-sm chat-input" placeholder="password" />
       </br>
       <div class="wrapper">
