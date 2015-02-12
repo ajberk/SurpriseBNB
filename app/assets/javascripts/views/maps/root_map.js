@@ -21,33 +21,34 @@ SurpriseBNBApp.Views.RootMap = Backbone.CompositeView.extend({
   // Event handlers
   addMarker: function (listing) {
     var data = listing.get("street_address") + " " + listing.get("city") + " " + listing.get("zipcode")
-    debugger
-
     $.ajax({
-      url: 'https://maps.googleapis.com/maps/api/geocode/',
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + data,
       dataType: 'json',
-      data: data,
+      // data: data,
       success: function(response) {
-        //response will have data corresponding to listing in the listings collection
-        debugger
-        response
-      }
-    })
+        this.successCallback(listing, response)
+      }.bind(this)
+    });
+  },
 
-
+  successCallback: function(listing,response) {
+    //response will have data corresponding to listing in the listings collection
+    var lat = response.results[0].geometry.location.lat
+    var lng = response.results[0].geometry.location.lng
 
     if (this._markers[listing.id]) { return };
     var view = this;
 
     var latLng = new google.maps.LatLng(
-      listing.get('lat'),
-      listing.get('lng')
+      lat,
+      lng
     );
+    debugger
 
     var marker = new google.maps.Marker({
       position: latLng,
       map: this._map,
-      title: listing.get('title')
+      title: "A Great Property You Might Stay In!"
     });
 
     google.maps.event.addListener(marker, 'click', function (event) {

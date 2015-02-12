@@ -33,7 +33,6 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   },
 
   render: function(){
-    console.log("listing show");
     this.$el.html(this.hiddenTemplate({
       listing: this.model
     }));
