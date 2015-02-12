@@ -32,6 +32,10 @@ SurpriseBNBApp.Views.SearchForm = Backbone.CompositeView.extend({
     var that = this;
     var $target = $(event.currentTarget);
     var data = $target.serializeJSON();
+    debugger
+    var start_date = data.search.start_date;
+    var end_date = data.search.end_date;
+    //WHERE THE SEARCH DATA IS!!!!!
 
     // ajax stuff, pass in the data
     $.ajax({
@@ -39,6 +43,13 @@ SurpriseBNBApp.Views.SearchForm = Backbone.CompositeView.extend({
       dataType: 'json',
       data: data,
       success: function(response) {
+        var bookingData = {
+          "booker_id": SurpriseBNBApp.currentUserId,
+          "start_date": start_date,
+          "end_date": end_date,
+        }
+        debugger
+        SurpriseBNBApp.current_pending_booking = new SurpriseBNBApp.Models.Booking(bookingData);
         //response will have data corresponding to listing in the listings collection
         var listing = new SurpriseBNBApp.Models.Listing(response)
         that.collection.add(listing, {merge: true})

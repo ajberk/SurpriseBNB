@@ -12,8 +12,12 @@ Should be sorted by start date of vacation. - make a bookings table that will fi
 
 
 BUGS
-
--right now only the user that made the listing gets results when they search the listings. bad
-ACTUALLY just the images dont load
-
 -still some map problems???
+
+
+
+bookin table
+start date
+end date
+booker_id -> user who is going to stay in the place
+listing_id -> the place
