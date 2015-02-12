@@ -43,13 +43,30 @@
       <span class="group-btn">
         <input type= "submit" value= "Sign In" class="btn btn-primary btn-md">
         or sign in as
-        <input type= "submit" value= "Guest" class="btn btn-primary btn-md">
-        <!-- <a href="#" class="btn btn-primary btn-md">login <i class="fa fa-sign-in"></i></a> -->
+      </form>
+
+
+        <form action= <%=session_url%> method= "post">
+          <input
+          type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+          <input type= "hidden" name= "user[username]"  value= "guest" >
+          <input type= "hidden" name= "user[password]" value= "password">
+          <input type= "submit" value= "Guest" class="btn btn-primary btn-md">
+        </form>
+
+
+
+
+
+
+
       </span>
+
     </div>
   </div>
 
 </div>
 </div>
 </div>
-</form>

@@ -15,6 +15,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.listenTo(this.model,'sync', this.renderMainImage)
     this.renderSearchForm();
     this.renderCommentForm();
+    // this.renderMainImage();
   },
 
   render: function(){
@@ -23,9 +24,9 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     }));
     this.renderComments();
     this.attachSubviews();
-    setTimeout(function () {
+    setTimeout(function() {
       this.$("#mygallery").justifiedGallery();
-    }.bind(this), 10)
+    }.bind(this), 10);
 
     // $('.sub-img').hover(function(){
     //   $(this).css({width:"200%",height:"200%"});
@@ -85,6 +86,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
   },
 
   renderSurprise: function() {
+    debugger
     var view = new SurpriseBNBApp.Views.ListingSurprise({
       model: this.model
     });

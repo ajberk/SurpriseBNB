@@ -9,6 +9,7 @@
   <script charset="utf-8">
     $(document).ready(function(){
       SurpriseBNBApp.currentUserId = <%= current_user.id %>
+      SurpriseBNBApp.currentUserUsername = "<%= current_user.username %>"
       SurpriseBNBApp.initialize();
     });
   </script>

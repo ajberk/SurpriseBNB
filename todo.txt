@@ -1,10 +1,12 @@
 
 LAST FEATURES
 
+
 -Make Users show page This will have a list of users upcoming vacations
 This list will include dates your gonna travel, the title, address and price per night.
-Should be sorted by start date of vacation.
--need a guest log in
+Should be sorted by start date of vacation. - make a bookings table that will fill in when user hits submit
+
+
 -make nav bar and footer orange.
 
 
@@ -12,3 +14,6 @@ Should be sorted by start date of vacation.
 BUGS
 
 -right now only the user that made the listing gets results when they search the listings. bad
+ACTUALLY just the images dont load
+
+-still some map problems???
