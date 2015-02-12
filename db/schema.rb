@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150212180609) do
+ActiveRecord::Schema.define(version: 20150212190840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: true do |t|
-    t.integer  "owner_id",   null: false
     t.integer  "booker_id",  null: false
     t.date     "start_date", null: false
     t.date     "end_date",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "listing_id", null: false
   end
 
   create_table "comments", force: true do |t|

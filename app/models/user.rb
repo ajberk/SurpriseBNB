@@ -19,6 +19,13 @@ class User < ActiveRecord::Base
   #associations
   has_many :listings
 
+  has_many(
+    :bookings,
+    class_name: :Booking,
+    foreign_key: :booker_id,
+    primary_key: :id
+  )
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)

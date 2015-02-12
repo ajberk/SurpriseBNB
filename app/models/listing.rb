@@ -34,6 +34,13 @@ class Listing < ActiveRecord::Base
   has_many :comments
   has_many :images, inverse_of: :listing
 
+  has_many(
+    :bookings,
+    class_name: :Booking,
+    foreign_key: :listing_id,
+    primary_key: :id
+  )
+
   accepts_nested_attributes_for(:images) #look up options, makes setter method called images_attributes=
 
   def self.search_listings(search_params)
