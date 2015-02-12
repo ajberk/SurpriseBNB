@@ -65,8 +65,8 @@ html, body, #map-canvas {
 #map-canvas {
   min-height: 500px;
   overflow: hidden;
-  border: 1px solid black;
-  padding: 1px;
+  // border: 1px solid black;
+  // padding: 1px;
 }
 
 #map-canvas > div {
@@ -74,7 +74,7 @@ html, body, #map-canvas {
 }
 
 #map-canvas-show {
-  min-height: 800px;
+  min-height: 500px;
   overflow: hidden;
   width: 100%;
   padding-top: 2px;
@@ -82,7 +82,12 @@ html, body, #map-canvas {
 }
 
 #map-canvas-show > div {
-  height: 800px;
+  height: 500px;
+}
+
+.bordered  {
+  border: 1px solid black;
+  padding: 1px;
 }
 
 .image-div {
