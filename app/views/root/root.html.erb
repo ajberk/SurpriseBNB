@@ -3,9 +3,13 @@
 </div>
 
 
-<script charset="utf-8">
-  $(document).ready(function(){
-    SurpriseBNBApp.currentUserId = <%= current_user.id %>
-    SurpriseBNBApp.initialize();
-  });
-</script>
+<% if current_user.nil? %>
+  <% require_signed_in %>
+<% else %>
+  <script charset="utf-8">
+    $(document).ready(function(){
+      SurpriseBNBApp.currentUserId = <%= current_user.id %>
+      SurpriseBNBApp.initialize();
+    });
+  </script>
+<% end%>

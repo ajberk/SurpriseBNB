@@ -1,18 +1,16 @@
 
 
--search seems to be broken for all pages,
--fix modal, make it redirect to the users show page. This will have a list of users upcoming vacations
+-Make Users show page This will have a list of users upcoming vacations
 This list will include dates your gonna travel, the title, address and price per night.
 Should be sorted by start date of vacation.
 
--make the map on the root page show all of the listings.
--make the map on the modal show the listing that it is showing.
--fix up styling of the sign in and sign up pages
+-COMMENTS BROKE!
 
+-make the map on the root page show all of the listings. DONE EXCEPT FOR WHEN YOU NAVIGATE BACK
 
+-right now only the user that made the listing gets results when they search the listings. bad
+
+-HEROKU DOESNT WORK WHYYYYYYYYYYYYYYYYYYYYYYYYYYY
+
+-need a guest log in
 -make nav bar and footer orange.
-
-
-QUESTIONS:
-  Why are the maps broken?
-  How do I get 

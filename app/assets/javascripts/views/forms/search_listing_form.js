@@ -7,8 +7,10 @@ SurpriseBNBApp.Views.SearchForm = Backbone.CompositeView.extend({
   },
 
   render: function() {
-    console.log("form show");
-    this.$el.html(this.template());
+    var date = new Date()
+    this.$el.html(this.template({
+      date: date
+    }));
     this.$(".countries").chosen({width: '200px'});
     return this;
   },
