@@ -3,10 +3,8 @@ SurpriseBNBApp.Views.RootMap = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this._markers = {};
-    this.listenTo(this.collection, 'add sync', this.addMarker);
-    Backbone.history.on("route", function(listing){
-      this.collection.each(this.addMarker(listing))
-    }.bind(this));
+    this.listenTo(this.collection, 'add', this.addMarker);
+    this.addMarkers();
   },
 
   render: function() {
@@ -15,7 +13,6 @@ SurpriseBNBApp.Views.RootMap = Backbone.CompositeView.extend({
       center: { lat: 37.7833, lng: -122.4167},
       zoom: 2,
       height: 500,
-
     };
     this._map = new google.maps.Map(this.el, mapOptions);
     return this;
@@ -31,6 +28,13 @@ SurpriseBNBApp.Views.RootMap = Backbone.CompositeView.extend({
       success: function(response) {
         this.successCallback(listing, response)
       }.bind(this)
+    });
+  },
+
+  addMarkers: function () {
+    var self = this;
+    this.collection.each(function (listing) {
+      self.addMarker(listing);
     });
   },
 

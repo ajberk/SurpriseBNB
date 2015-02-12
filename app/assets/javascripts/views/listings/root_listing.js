@@ -4,10 +4,11 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.CompositeView.extend({
 
   initialize: function(options) {
     this.renderSearchForm();
-    this.makeMapView()
+    this.makeMapView();
   },
 
   afterRender: function () {
+    // this.makeMapView();
     this.mapResize();
   },
 
@@ -46,7 +47,8 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.CompositeView.extend({
   },
 
   mapResize: function() {
-    google.maps.event.trigger(this.mapView._map, 'resize')
+    google.maps.event.trigger(this.mapView._map, 'resize');
+    this.mapView._map.panTo({ lat: 37.7833, lng: -122.4167});
   },
 
   submit: function(event){
