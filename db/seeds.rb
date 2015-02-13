@@ -112,7 +112,69 @@ listings = Listing.create!([
     zipcode: 48104,
     details: "Come stay on our couch and see what this city has to offer. We are a couple college kids trying to make a few extra dollars. This a great place to come stay if you are visiting the school or maybe visiting friends here. Come!",
     price: 15
+    },
+  {
+    user_id: 1,
+    title: "Room in Lovely Rustic Home!",
+    start_date: "2015-01-01",
+    end_date: "2020-01-01",
+    country: "United States",
+    city: "Juneau",
+    street_address: "278 S Franklin St",
+    zipcode: 99801,
+    details: "The bedroom is cozy with a view of our back wooded area. The house has a wrap around deck and sits over a stream. This is a nice place to sit and enjoy nature.",
+    price: 55
+    },
+  {
+    user_id: 1,
+    title: "Room in out beautiful apartment",
+    start_date: "2015-01-01",
+    end_date: "2020-01-01",
+    country: "United States",
+    city: "Houston",
+    street_address: "91 Lockwood Dr",
+    zipcode: 77011,
+    details: "Queen bed, dresser drawers, double curtains, blinds, tower fan, essential oil diffuser, closet with hangers and hamper. All the essentials you need for a nice hotel like visit! Fresh towels/linens in bath. FREE WIFI!",
+    price: 49
+    },
+  {
+    user_id: 1,
+    title: "Twin beds- beautiful area - parking",
+    start_date: "2015-01-01",
+    end_date: "2020-01-01",
+    country: "United Kingdom",
+    city: "London",
+    street_address: "11-18 Panton St",
+    zipcode: SW1Y 4DP,
+    details: "Warm friendly home with cooked breakfast, parking & WiFi. Quiet area 10 mins walk uphill from many attractions. Parking must be booked in advance.",
+    price: 66
+    },
+  {
+    user_id: 1,
+    title: "Charming Triplex",
+    start_date: "2015-01-01",
+    end_date: "2020-01-01",
+    country: "France",
+    city: "Paris",
+    street_address: "52 Rue Rambuteau",
+    zipcode: 75003,
+    details: "Lovely house/loft located in a private, closed and flowery courtyard. A rare place to discover in this bustling city. Ideal for weekend or holiday with 2 to 4 people. The space is bright, calm and clean.",
+    price: 88
+    },
+  {
+    user_id: 1,
+    title: "Room in the Heart of the City",
+    start_date: "2015-01-01",
+    end_date: "2020-01-01",
+    country: "Granada",
+    city: "Spain",
+    street_address: "Carrera del Darro, 31",
+    zipcode: 18010,
+    details: "Spacious single bedroom with comfortable bed and wifi in the heart of the city. All hotel ammenities are provided. You are welcome to the kitchen. Please do not bring outside guests into my home.",
+    price: 88
   },
+
+
 ])
 
 images = Image.create!([
@@ -145,6 +207,27 @@ images = Image.create!([
   {image_url: "https://a0.muscache.com/ic/pictures/24545378/70ce7cd9_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[7]},
   {image_url: "https://a2.muscache.com/ic/pictures/24545600/2cbb8732_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[7]},
   {image_url: "https://a0.muscache.com/ic/pictures/32384409/1bc025d4_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[7]},
+  {image_url: "https://a0.muscache.com/ic/pictures/49017396/c3b24fd2_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[8]},
+  {image_url: "https://a0.muscache.com/ic/pictures/49017453/1e5b2431_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[8]},
+  {image_url: "https://a2.muscache.com/ic/pictures/49017356/d25b04a8_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[8]},
+  {image_url: "https://a0.muscache.com/ic/pictures/49016851/bbd9276c_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[8]},
+  {image_url: "https://a2.muscache.com/ic/pictures/38027362/fed10070_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[9]},
+  {image_url: "https://a1.muscache.com/ic/pictures/42171056/63afd998_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[9]},
+  {image_url: "https://a2.muscache.com/ic/pictures/38027362/fed10070_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[9]},
+  {image_url: "https://a1.muscache.com/ic/pictures/52263685/a0b158c5_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[9]},
+  {image_url: "https://a2.muscache.com/ic/pictures/40665798/f930ed55_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[10]},
+  {image_url: "https://a0.muscache.com/ic/pictures/44285289/28872e96_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[10]},
+  {image_url: "https://a2.muscache.com/ic/pictures/40603519/bce1feca_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[10]},
+  {image_url: "https://a2.muscache.com/ic/pictures/40603448/d7447f98_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[10]},
+  {image_url: "https://a0.muscache.com/ic/pictures/10896657/a822367b_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[11]},
+  {image_url: "https://a1.muscache.com/ic/pictures/10896658/4e039e2f_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[11]},
+  {image_url: "https://a0.muscache.com/ic/pictures/10896916/f2317a1a_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[11]},
+  {image_url: "https://a1.muscache.com/ic/pictures/10896915/e1d5cbd1_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[11]},
+  {image_url: "https://a1.muscache.com/ic/pictures/3596549/e6c2e0aa_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[12]},
+  {image_url: "https://a2.muscache.com/ic/pictures/3596275/0996feb8_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[12]},
+  {image_url: "https://www.airbnb.com/rooms/169302?checkin=02%2F19%2F2015&checkout=02%2F25%2F2015&s=1KrP", listing: listings[12]},
+  {image_url: "https://a0.muscache.com/ic/pictures/3596784/e992414b_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[12]},
+  {image_url: "https://a1.muscache.com/ic/pictures/7056728/900e1ecc_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[12]},
 ])
 
 
