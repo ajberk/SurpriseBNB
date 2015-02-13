@@ -7,7 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-listings = Listing.create!([{
+listings = Listing.create!([
+  {
     user_id: 1,
     title: "Country Living at its finest",
     start_date: "2015-01-01",
@@ -75,8 +76,8 @@ listings = Listing.create!([{
     zipcode: 2026,
     details: "Being close to the beach is a real luxery! And very close to downtown, restaurants and bars! Room for a couple. The local people are known for their friendliness and sense of community. YOU WILL LOVE IT!",
     price: 67
-    },
-}])
+    }
+])
 
 images = Image.create!([
   {image_url: "https://a0.muscache.com/ic/pictures/9094000/58b5fc4e_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[0]},
