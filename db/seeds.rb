@@ -82,7 +82,7 @@ listings = Listing.create!([
 images = Image.create!([
   {image_url: "https://a0.muscache.com/ic/pictures/9094000/58b5fc4e_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[0]},
   {image_url: "https://a1.muscache.com/ic/pictures/9094035/bb6a06ca_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[0]},
-  {image_url: "https://a2.muscache.com/ic/pictures/9094021/e8b188fa_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[0]}
+  {image_url: "https://a2.muscache.com/ic/pictures/9094021/e8b188fa_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[0]},
   {image_url: "https://a1.muscache.com/ic/pictures/58993556/87f49868_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing_id: listings[1]},
   {image_url: "https://a0.muscache.com/ic/pictures/65358421/c9a5d472_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing_id: listings[1]},
   {image_url: "https://a2.muscache.com/ic/pictures/65358372/a484956a_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing_id: listings[1]},
