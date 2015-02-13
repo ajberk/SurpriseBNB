@@ -5,7 +5,7 @@
 
 [heroku]: http://surprisebnb.herokuapp.com
 
-[Real URL]: surprisebnb.com
+[Real URL]: http://www.surprisebnb.com
 
 ## Minimum Viable Product
 SurpriseBNB is a clone of AirBNB built on Rails and Backbone, with the twist that
