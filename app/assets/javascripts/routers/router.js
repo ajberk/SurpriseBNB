@@ -39,9 +39,7 @@ SurpriseBNBApp.Routers.Router = Backbone.Router.extend({
   },
 
   showUser: function () {
-    var view = new SurpriseBNBApp.Views.UserShow({
-      collection: this.listings
-    })
+    var view = new SurpriseBNBApp.Views.UserShow({});
     this._swapView(view)
   },
 

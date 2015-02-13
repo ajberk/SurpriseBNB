@@ -9,7 +9,7 @@ class Api::BookingsController < Api::ApiController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
-      render json: @booking
+      render :show
     else
       render json: @booking.errors.full_messages, status: :unprocessable_entity
     end
