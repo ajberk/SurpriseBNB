@@ -19,6 +19,10 @@ SurpriseBNBApp.Views.SearchForm = Backbone.CompositeView.extend({
     this.render();
   },
 
+  afterRender: function() {
+    this.render();
+  },
+
   renderNotFound: function() {
     var $error = this.$('.error')
     $error.html(this.templateNotFound());

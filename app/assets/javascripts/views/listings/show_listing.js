@@ -16,6 +16,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.renderSearchForm();
     this.renderCommentForm();
     this.renderImages()
+    // this.renderMainImage();
   },
 
   render: function(){
@@ -36,6 +37,10 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
 
     this.onRender();
     return this;
+  },
+
+  afterRender: function() {
+    this.renderImages()
   },
 
   renderComments: function () {
