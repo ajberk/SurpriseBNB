@@ -103,4 +103,4 @@ images = Image.create!([
 
 
 
-  # {image_url: "", listing_id: listings[]},
+  # {image_url: "", listing: listings[]},
