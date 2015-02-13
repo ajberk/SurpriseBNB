@@ -145,7 +145,7 @@ listings = Listing.create!([
     country: "United Kingdom",
     city: "London",
     street_address: "11-18 Panton St",
-    zipcode: SW1Y 4DP,
+    zipcode: SW1Y4DP,
     details: "Warm friendly home with cooked breakfast, parking & WiFi. Quiet area 10 mins walk uphill from many attractions. Parking must be booked in advance.",
     price: 66
     },
