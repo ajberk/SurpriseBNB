@@ -18,10 +18,7 @@ listings = Listing.create!([{
     zipcode: 68410,
     details: "Private room and bath in our home located on 10 acres of private and secluded property 25 minutes south of downtown. Enjoy the outdoors! Come enjoy the quiet solitude of the country.",
     price: 60
-  }
-  {
-
-    }])
+  }])
 
 images = Image.create!([
   {image_url: "https://a0.muscache.com/ic/pictures/9094000/58b5fc4e_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[0]}
