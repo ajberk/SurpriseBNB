@@ -4,18 +4,20 @@
 
 [heroku]: http://surprisebnb.herokuapp.com
 
+[Real URL]: surprisebnb.com
+
 ## Minimum Viable Product
 SurpriseBNB is a clone of AirBNB built on Rails and Backbone, with the twist that
 instead of reviewing listings by location, listings are seen randomly with the location hidden.
 When a user books a listing, the location is revealed. Users can:
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
-- [ ] Create Listings
-- [ ] Search Listings via Price, type of location (Urban, Suburban, Rural), dates available
-- [ ] View Random Listing
-- [ ] View Confirmation Page, with location of listing revealed
-- [ ] Have user show page with upcoming bookings listed
+- [x] Create accounts
+- [x] Create sessions (log in)
+- [x] Create Listings
+- [x] Search Listings via Price, country, dates available
+- [x] View Random Listing
+- [x] View Confirmation Page, with location of listing revealed
+- [x] Have user show page with upcoming bookings listed
 
 ## Design Docs
 * [View Wireframes][views]
@@ -54,16 +56,14 @@ I plan to use third-party libraries to add functionality to the `PostForm` and
 `PostShow` views in this phase. First I'll need to add a Markdown editor to the
 `PostForm`, and make sure that the Markdown is properly escaped and formatted in
 the `PostShow` view. I also plan to integrate Filepicker for file upload so
-users can add images to listings posts. Ideally, when the description of a listing
-is created, the app will automatically censor words that will give away location
+users can add images to listings posts.
 
 [Details][phase-four]
 
 ### Phase 5: Revealed Listing Page and maps (~1-2 days)
 I'll update the post listing page revealed after a user has booked the listing.
 This will include the original listing with location words revealed and a map
-of the location. The map on the search page will have all listings pinned and when a country
-is specified as a place the user would be willing to go, that country should light up on the map
+of the location. The map on the search page will have all listings pinned.
 
 [Details][phase-five]
 
@@ -81,6 +81,7 @@ I'll make a users home page, where it displays a list of upcoming trips for the 
 - [ ] Support for multiple open sessions
 - [ ] User avatars
 - [ ] Let users narrow their search parameters (ie states, near land feature...)
+- [ ] censor location words automatically so the description cant give away the location
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
