@@ -97,7 +97,7 @@ images = Image.create!([
   {image_url: "https://a0.muscache.com/ic/pictures/37365290/5476397a_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing_id: listings[4]},
   {image_url: "https://a0.muscache.com/ic/pictures/38643957/36c29c2e_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing_id: listings[4]},
   {image_url: "https://a1.muscache.com/ic/pictures/38643895/25af3da3_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing_id: listings[4]},
-  {image_url: "https://a1.muscache.com/ic/pictures/38643824/7bd0108a_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing_id: listings[4]},
+  {image_url: "https://a1.muscache.com/ic/pictures/38643824/7bd0108a_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing_id: listings[4]}
 ])
 
 
