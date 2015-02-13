@@ -76,7 +76,43 @@ listings = Listing.create!([
     zipcode: 2026,
     details: "Being close to the beach is a real luxery! And very close to downtown, restaurants and bars! Room for a couple. The local people are known for their friendliness and sense of community. YOU WILL LOVE IT!",
     price: 67
-    }
+    },
+  {
+    user_id: 1,
+    title: "An interesting urban place",
+    start_date: "2015-01-01",
+    end_date: "2020-01-01",
+    country: "United States",
+    city: "San Francisco",
+    street_address: "1061 Market St",
+    zipcode: 94103,
+    details: "Cool urban location. Mix with the locals, go to cool bars, see cool restaurants, go to cool nature places and be cool.",
+    price: 10
+    },
+  {
+    user_id: 1,
+    title: "Quiet suburban house close to a major city",
+    start_date: "2015-01-01",
+    end_date: "2020-01-01",
+    country: "United States",
+    city: "Bethesda",
+    street_address: "4404 Chestnut St",
+    zipcode: 20814,
+    details: "Private room in a house located in a quiet suburb. Can get downtown in approximately 30 mins. You will have free range of my kitchen and food. I have three dogs; they are very friendly. Come stay with me.",
+    price: 30
+    },
+  {
+    user_id: 1,
+    title: "College town apartment",
+    start_date: "2015-01-01",
+    end_date: "2020-01-01",
+    country: "United States",
+    city: "Ann Arbor",
+    street_address: "410 Thompson St",
+    zipcode: 48104,
+    details: "Come stay on our couch and see what this city has to offer. We are a couple college kids trying to make a few extra dollars. This a great place to come stay if you are visiting the school or maybe visiting friends here. Come!",
+    price: 15
+  },
 ])
 
 images = Image.create!([
@@ -98,7 +134,17 @@ images = Image.create!([
   {image_url: "https://a0.muscache.com/ic/pictures/37365290/5476397a_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[4]},
   {image_url: "https://a0.muscache.com/ic/pictures/38643957/36c29c2e_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[4]},
   {image_url: "https://a1.muscache.com/ic/pictures/38643895/25af3da3_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[4]},
-  {image_url: "https://a1.muscache.com/ic/pictures/38643824/7bd0108a_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[4]}
+  {image_url: "https://a1.muscache.com/ic/pictures/38643824/7bd0108a_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[4]},
+  {image_url: "https://images.42floors.com/7113d04f4cd686d8b3119944c2c19acad086070e.jpg?s=700x467%23", listing: listings[5]},
+  {image_url: "https://images.42floors.com/a8b2b6f3096294c24bbd5235e0ca6d92eafed6ee.jpg?s=75x75%23", listing: listings[5]},
+  {image_url: "https://images.42floors.com/028fd8ade854fff376c52d56a7ff07ebd5599eee.jpg?s=75x75%23", listing: listings[5]},
+  {image_url: "https://a0.muscache.com/ic/pictures/50758263/7624e8a0_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[6]},
+  {image_url: "https://a0.muscache.com/ic/pictures/52564735/dd4f0462_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[6]},
+  {image_url: "https://a1.muscache.com/ic/pictures/52564762/29990b68_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[6]},
+  {image_url: "https://a2.muscache.com/ic/pictures/52564862/c2e58177_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[6]},
+  {image_url: "https://a0.muscache.com/ic/pictures/24545378/70ce7cd9_original.jpg?interpolation=lanczos-none&size=xx_large&output-format=jpg&output-quality=70", listing: listings[7]},
+  {image_url: "https://a2.muscache.com/ic/pictures/24545600/2cbb8732_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[7]},
+  {image_url: "https://a0.muscache.com/ic/pictures/32384409/1bc025d4_original.jpg?interpolation=lanczos-none&size=x_large&output-format=progressive-jpeg&output-quality=70", listing: listings[7]},
 ])
 
 
