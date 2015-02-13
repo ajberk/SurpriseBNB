@@ -2,19 +2,19 @@
 
 <form action= <%=session_url%> method= "post">
 
-  <input
-  type="hidden"
-  name="authenticity_token"
-  value="<%= form_authenticity_token %>">
+<input
+type="hidden"
+name="authenticity_token"
+value="<%= form_authenticity_token %>">
 
 
-  <label for= "user_username">Username</label>
-  <input type= "text" name= "user[username]"  id="user_username" >
+<label for= "user_username">Username</label>
+<input type= "text" name= "user[username]"  id="user_username" >
 
-  <label for= "user_password">Password</label>
-  <input type= "text" name= "user[password]" id= "user_password">
+<label for= "user_password">Password</label>
+<input type= "text" name= "user[password]" id= "user_password">
 
-  <input type= "submit" value= "Sign In" class="btn btn-primary btn-md">
+<input type= "submit" value= "Sign In" class="btn btn-primary btn-md">
 
 
 </form> -->
@@ -26,25 +26,23 @@
   name="authenticity_token"
   value="<%= form_authenticity_token %>">
 
-<div class = "jumbotron">
-  <h1>Welcome back.</h1>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-offset-5 col-md-3">
-      <div class="form-login">
-        <label for= "user_username">Username</label>
-        <input type="text" id="userName" name= "user[username]" class="form-control input-sm chat-input" placeholder="username" />
+  <div class = "jumbotron">
+    <h1>Welcome back.</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-5 col-md-3">
+        <div class="form-login">
+          <label for= "user_username">Username</label>
+          <input type="text" id="userName" name= "user[username]" class="form-control input-sm chat-input" placeholder="username" />
+        </br>
+        <label for= "user_password">Password</label>
+        <input type="password" id="userPassword" name= "user[password]" class="form-control input-sm chat-input" placeholder="password" />
       </br>
-      <label for= "user_password">Password</label>
-      <input type="password" id="userPassword" name= "user[password]" class="form-control input-sm chat-input" placeholder="password" />
-    </br>
-    <div class="wrapper">
-      <span class="group-btn">
-        <input type= "submit" value= "Sign In" class="btn btn-primary btn-md">
-        or sign in as
-      </form>
-
+      <div class="wrapper">
+        <span class="group-btn">
+          <input type= "submit" value= "Sign In" class="btn btn-primary btn-md sign-in">
+        </form>
 
         <form action= <%=session_url%> method= "post">
           <input
@@ -53,7 +51,7 @@
           value="<%= form_authenticity_token %>">
           <input type= "hidden" name= "user[username]"  value= "guest" >
           <input type= "hidden" name= "user[password]" value= "password">
-          <input type= "submit" value= "Guest" class="btn btn-primary btn-md">
+          <input type= "submit" value= "Guest" class="btn btn-primary btn-md sign-in">
         </form>
 
 
