@@ -1,8 +1,9 @@
 class Api::BookingsController < Api::ApiController
 
   def index
-    @booking = Booking.where("booker_id = ?", current_user.id)
-    render json: @booking
+    @bookings = Booking.where("booker_id = ?", current_user.id)
+    # render json: @booking
+    render :index
   end
 
   def create

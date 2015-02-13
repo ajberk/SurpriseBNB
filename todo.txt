@@ -16,8 +16,9 @@ BUGS
 
 
 
-bookin table
-start date
-end date
-booker_id -> user who is going to stay in the place
-listing_id -> the place
+<%= this.listings.getOrFetch(booking.escape("listing_id").escape("street address")%>,
+        <br>
+        <%= this.listings.getOrFetch(booking.escape("listing_id").escape("country") %>,
+        <%= this.listings.getOrFetch(booking.escape("listing_id").escape("zipcode") %>
+
+        <h1 class="list-group-item-heading"><%= this.listings.getOrFetch(booking.escape("listing_id").escape("title") %></h1>

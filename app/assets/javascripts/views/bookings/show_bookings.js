@@ -1,5 +1,5 @@
-SurpriseBNBApp.Views.UserShow = Backbone.CompositeView.extend({
-  template: JST["users/show"],
+SurpriseBNBApp.Views.BookingShow = Backbone.CompositeView.extend({
+  template: JST["bookings/show"],
 
   initialize: function(options) {
   },
