@@ -15,7 +15,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.listenTo(this.model,'sync', this.renderMainImage)
     this.renderSearchForm();
     this.renderCommentForm();
-    this.renderImages()
+    // this.renderImages()
     // this.renderMainImage();
   },
 
