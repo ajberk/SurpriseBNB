@@ -13,13 +13,7 @@ Should be sorted by start date of vacation. - make a bookings table that will fi
 
 BUGS
 -still some map problems???
+-comments say username of the person logged in, not the person who made the comment....
+-spain property does not register
 
-
-
-<%= this.listings.getOrFetch(booking.escape("listing_id").escape("street address")%>,
-        <br>
-        <%= this.listings.getOrFetch(booking.escape("listing_id").escape("country") %>,
-        <%= this.listings.getOrFetch(booking.escape("listing_id").escape("zipcode") %>
-
-        <h1 class="list-group-item-heading"><%= this.listings.getOrFetch(booking.escape("listing_id").escape("title") %></h1>
-'
+- add user_id to comments

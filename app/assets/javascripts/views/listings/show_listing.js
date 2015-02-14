@@ -13,6 +13,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.listenTo(this.comments, 'add', this.addComment)
     this.listenTo(this.model.images(), 'add', this.addImage)
     this.listenTo(this.model,'sync', this.renderMainImage)
+    this.renderComments();
     this.renderSearchForm();
     this.renderCommentForm();
     // this.renderImages()
@@ -23,7 +24,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.$el.html(this.hiddenTemplate({
       listing: this.model
     }));
-    this.renderComments();
+
     this.attachSubviews();
     setTimeout(function() {
       this.$("#mygallery").justifiedGallery();
