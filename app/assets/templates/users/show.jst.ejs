@@ -25,6 +25,7 @@
       <h4 class="list-group-item-heading">Address:</h4>
       <p class="list-group-item-text"><%= booking.listing().escape("street_address") %>,
         <br>
+        <%= booking.listing().escape("city") %>, 
         <%= booking.listing().escape("country") %>,
         <%= booking.listing().escape("zipcode") %>
       </p>
