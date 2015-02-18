@@ -26,7 +26,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.attachSubviews();
     setTimeout(function() {
       this.$("#mygallery").justifiedGallery({
-        "lastRow": "justify",
+        "border": "5"
       });
     }.bind(this), 0);
 
