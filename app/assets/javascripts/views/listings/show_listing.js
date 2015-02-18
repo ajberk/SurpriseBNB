@@ -26,15 +26,9 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.attachSubviews();
     setTimeout(function() {
       this.$("#mygallery").justifiedGallery({
-        "rowHeight": "200"
+        lastRow : 'justify',
       });
-    }.bind(this), 0);
-
-    // $('.sub-img').hover(function(){
-    //   $(this).css({width:"200%",height:"200%"});
-    // },function(){
-    //   $(this).css({width:"100%",height:"100%"});
-    // });
+    }.bind(this), 10);
 
     this.onRender();
     return this;
