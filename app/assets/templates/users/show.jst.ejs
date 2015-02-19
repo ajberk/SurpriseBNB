@@ -3,37 +3,6 @@
 </div>
 
 <div class="trips">
-
-
- <% SurpriseBNBApp.Bookings.each( function(booking){ %>
-
-   <a class="list-group-item active">
-     <h1 class="list-group-item-heading"><%= booking.listing().escape("title")%></h1>
-   </a>
-
-    <a class="list-group-item">
-      <h4 class="list-group-item-heading"> Start Date:</h4>
-      <p class="list-group-item-text"><%= booking.escape("start_date")%></p>
-    </a>
-
-    <a class="list-group-item">
-      <h4 class="list-group-item-heading"> End Date:</h4>
-      <p class="list-group-item-text"><%= booking.escape("end_date")%></p>
-    </a>
-
-    <a class="list-group-item">
-      <h4 class="list-group-item-heading">Address:</h4>
-      <p class="list-group-item-text"><%= booking.listing().escape("street_address") %>,
-        <br>
-        <%= booking.listing().escape("city") %>, 
-        <%= booking.listing().escape("country") %>,
-        <%= booking.listing().escape("zipcode") %>
-      </p>
-    </a>
-
-    <br><br><br><br>
-
-
-  <% })%>
-  TRIPS TRIPS TRIPS
 </div>
+
+TRIPS TRIPS TRIPS

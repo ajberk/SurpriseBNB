@@ -4,7 +4,7 @@ json.extract! @listing, :id, :title, :start_date, :end_date, :country, :city,
 
 
 json.comments @listing.comments do |comment|
-  json.extract! comment, :id, :listing_id, :body
+  json.extract! comment, :id, :listing_id, :body, :user_id
 end
 
 json.images @listing.images do |image|

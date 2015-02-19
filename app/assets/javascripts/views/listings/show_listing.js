@@ -90,9 +90,7 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
    SurpriseBNBApp.current_pending_booking.set(idData)
    SurpriseBNBApp.current_pending_booking.save({}, {
      success: function() {
-       debugger
        SurpriseBNBApp.Bookings.add(SurpriseBNBApp.current_pending_booking)
-       debugger
      }
    })
 

@@ -1,3 +1,3 @@
 SurpriseBNBApp.Models.Comment = Backbone.Model.extend({
-  urlRoot: "/api/comments"
+  urlRoot: "/api/comments",
 });

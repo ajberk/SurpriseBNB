@@ -6,7 +6,6 @@ SurpriseBNBApp.Models.Booking = Backbone.Model.extend({
     if (!this._listing) {
       this._listing = new SurpriseBNBApp.Models.Listing();
     }
-
     return this._listing;
   },
 
@@ -15,8 +14,6 @@ SurpriseBNBApp.Models.Booking = Backbone.Model.extend({
       this.listing().set(response.listing, { parse: true });
       delete response.listing;
     }
-
-
     return response;
   }
 

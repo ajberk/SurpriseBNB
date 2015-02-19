@@ -8,10 +8,7 @@ class Api::CommentsController < Api::ApiController
   def create
     listing = Listing.find(params[:listing_id])
     @comment = listing.comments.new(comment_params)
-    # @comment.user_id = current_user.id
-
-    # add user_id to comments
-
+    @comment.user_id = current_user.id
     if @comment.save
       render json: @comment
     else

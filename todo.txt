@@ -6,6 +6,8 @@ LAST FEATURES
 This list will include dates your gonna travel, the title, address and price per night.
 Should be sorted by start date of vacation. - make a bookings table that will fill in when user hits submit
 
+-trying to get images to show up in the users show, problem is need a has many through association
+because just using "get" doesnt make a model.
 
 -make nav bar and footer orange.
 

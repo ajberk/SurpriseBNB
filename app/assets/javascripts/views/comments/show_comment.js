@@ -6,6 +6,7 @@ SurpriseBNBApp.Views.CommentShow = Backbone.CompositeView.extend({
   },
 
   render: function(){
+    debugger
     this.$el.html(this.template({
       comment: this.model
     }));
