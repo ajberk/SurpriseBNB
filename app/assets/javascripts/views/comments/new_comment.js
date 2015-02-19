@@ -20,10 +20,13 @@ SurpriseBNBApp.Views.CommentForm = Backbone.View.extend({
     event.preventDefault();
     var data = this.$el.serializeJSON();
     var that = this;
+    this.model.set({username: SurpriseBNBApp.currentUserUsername})
     this.model.save(data, {
       success: function() {
         that.collection.add(that.model, {merge: true})
-        that.model = new SurpriseBNBApp.Models.Comment({listing_id: that.model.get("listing_id")})
+        that.model = new SurpriseBNBApp.Models.Comment({
+          listing_id: that.model.get("listing_id")
+        })
       }
     })
   }
