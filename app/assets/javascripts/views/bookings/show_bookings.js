@@ -15,15 +15,15 @@ SurpriseBNBApp.Views.BookingShow = Backbone.CompositeView.extend({
     this.$el.html(content)
     this.attachSubviews();
     setTimeout(function() {
-      this.$("#mygallery").justifiedGallery({
+      this.$("#mygallery2").justifiedGallery({
         lastRow : 'justify',
+        rowHeight: "300"
       });
     }.bind(this), 10);
     return this;
   },
 
   addImage: function(image) {
-    debugger
     var view = new SurpriseBNBApp.Views.ImageShow({
       collection: this.listing.images(),
       model: image
