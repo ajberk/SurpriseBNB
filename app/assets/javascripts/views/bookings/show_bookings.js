@@ -2,31 +2,33 @@ SurpriseBNBApp.Views.BookingShow = Backbone.CompositeView.extend({
   template: JST["bookings/show"],
 
   initialize: function(options) {
-    // this.listenTo(this.model.listing().images(), 'add', this.addImage)
+    this.listing = options.model.listing()
+    this.listing.images().each(this.addImage.bind(this));
+    this.listenTo(this.listing.images(),'add', this.addImage)
   },
 
   render: function() {
     var content = this.template({
-      booking: this.model
+      booking: this.model,
+      listing: this.listing
     })
     this.$el.html(content)
+    this.attachSubviews();
+    setTimeout(function() {
+      this.$("#mygallery").justifiedGallery({
+        lastRow : 'justify',
+      });
+    }.bind(this), 10);
     return this;
   },
 
-  // afterRender: function() {
-  //   this.renderImages()
-  // },
-  //
-  // renderImages: function()
-  //   this.model.listing().images().each(this.addImage.bind(this));
-  // },
-  //
-  // addImage: function(image) {
-  //   var view = new SurpriseBNBApp.Views.ImageShow({
-  //     collection: this.model.listing().images(),
-  //     model: image
-  //   });
-  //   this.addSubview('.show-image', view);
-  // },
+  addImage: function(image) {
+    debugger
+    var view = new SurpriseBNBApp.Views.ImageShow({
+      collection: this.listing.images(),
+      model: image
+    });
+    this.addSubview('.show-image', view);
+  }
 
 });

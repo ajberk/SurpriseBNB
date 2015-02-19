@@ -22,14 +22,12 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     this.$el.html(this.hiddenTemplate({
       listing: this.model
     }));
-
     this.attachSubviews();
     setTimeout(function() {
       this.$("#mygallery").justifiedGallery({
         lastRow : 'justify',
       });
     }.bind(this), 10);
-
     this.onRender();
     return this;
   },
@@ -93,7 +91,6 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
        SurpriseBNBApp.Bookings.add(SurpriseBNBApp.current_pending_booking)
      }
    })
-
   var view = new SurpriseBNBApp.Views.ListingSurprise({
     model: this.model,
     });

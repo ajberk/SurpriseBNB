@@ -1,5 +1,6 @@
 SurpriseBNBApp.Collections.Bookings = Backbone.Collection.extend({
   model: SurpriseBNBApp.Models.Booking,
+  
   url: "/api/bookings",
 
   getOrFetch: function (id) {

@@ -1,5 +1,5 @@
  <a class="list-group-item active">
-   <h1 class="list-group-item-heading"><%= booking.listing().escape("title")%></h1>
+   <h1 class="list-group-item-heading"><%= listing.escape("title")%></h1>
  </a>
 
 <a class="list-group-item">
@@ -14,11 +14,11 @@
 
 <a class="list-group-item">
   <h4 class="list-group-item-heading">Address:</h4>
-  <p class="list-group-item-text"><%= booking.listing().escape("street_address") %>,
+  <p class="list-group-item-text"><%= listing.escape("street_address") %>,
     <br>
-    <%= booking.listing().escape("city") %>,
-    <%= booking.listing().escape("country") %>,
-    <%= booking.listing().escape("zipcode") %>
+    <%= listing.escape("city") %>,
+    <%= listing.escape("country") %>,
+    <%= listing.escape("zipcode") %>
   </p>
 </a>
 

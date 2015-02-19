@@ -2,13 +2,16 @@ SurpriseBNBApp.Views.UserShow = Backbone.CompositeView.extend({
   template: JST["users/show"],
 
   initialize: function(options) {
-    this.listenTo(SurpriseBNBApp.Bookings, "all", this.renderContent);
+    this.listenTo(SurpriseBNBApp.Bookings, "sync", this.render);
+    this.listenTo(SurpriseBNBApp.Bookings, "add", this.addContent);
+    SurpriseBNBApp.Bookings.each(this.addContent.bind(this));
   },
 
   render: function() {
-    var content = this.template()
+    var content = this.template();
     this.$el.html(content)
-    this.renderContent()
+    this.renderContent();
+    this.attachSubviews();
     return this;
   },
 
@@ -20,6 +23,5 @@ SurpriseBNBApp.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   renderContent: function () {
-    SurpriseBNBApp.Bookings.each(this.addContent.bind(this));
   },
 });
