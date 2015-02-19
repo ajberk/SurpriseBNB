@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   attr_reader :password
   #associations
   has_many :listings
-
+  has_many :comments
   has_many(
     :bookings,
     class_name: :Booking,

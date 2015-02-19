@@ -14,4 +14,8 @@ SurpriseBNBApp.Views.ImageShow = Backbone.CompositeView.extend({
     $('div.image-div').html(content);
     return this;
   },
+
+  afterRender: function() {
+    this.renderImages()
+  },
 });
