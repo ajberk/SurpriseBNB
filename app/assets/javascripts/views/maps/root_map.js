@@ -18,13 +18,11 @@ SurpriseBNBApp.Views.RootMap = Backbone.CompositeView.extend({
     return this;
   },
 
-  // Event handlers
   addMarker: function (listing) {
     var data = listing.get("street_address") + " " + listing.get("city") + " " + listing.get("zipcode")
     $.ajax({
       url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + data,
       dataType: 'json',
-      // data: data,
       success: function(response) {
         this.successCallback(listing, response)
       }.bind(this)
@@ -39,7 +37,6 @@ SurpriseBNBApp.Views.RootMap = Backbone.CompositeView.extend({
   },
 
   successCallback: function(listing,response) {
-    //response will have data corresponding to listing in the listings collection
     var lat = response.results[0].geometry.location.lat
     var lng = response.results[0].geometry.location.lng
 
@@ -71,11 +68,6 @@ SurpriseBNBApp.Views.RootMap = Backbone.CompositeView.extend({
   },
 
   showMarkerInfo: function (event, marker) {
-    // This event will be triggered when a marker is clicked. Right now it
-    // simply opens an info window with the title of the marker. However, you
-    // could get fancier if you wanted (maybe use a template for the content of
-    // the window?)
-
     var infoWindow = new google.maps.InfoWindow({
       content: marker.title
     });

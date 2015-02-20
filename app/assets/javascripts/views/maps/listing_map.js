@@ -71,11 +71,6 @@ SurpriseBNBApp.Views.ListingsMap = Backbone.CompositeView.extend({
   },
 
   showMarkerInfo: function (event, marker) {
-    // This event will be triggered when a marker is clicked. Right now it
-    // simply opens an info window with the title of the marker. However, you
-    // could get fancier if you wanted (maybe use a template for the content of
-    // the window?)
-
     var infoWindow = new google.maps.InfoWindow({
       content: marker.address
     });

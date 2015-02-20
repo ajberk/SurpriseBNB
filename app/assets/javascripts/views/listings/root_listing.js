@@ -8,7 +8,6 @@ SurpriseBNBApp.Views.ListingsRoot = Backbone.CompositeView.extend({
   },
 
   afterRender: function () {
-    // this.makeMapView();
     this.mapResize();
   },
 

@@ -11,21 +11,13 @@ SurpriseBNBApp.Views.ListingForm = Backbone.View.extend({
     return this;
   },
 
-  afterRender: function () {
-    // setTimeout(function () {
-    //   this.installFilePicker();
-    // }.bind(this), 0);
-  },
-
   events: {
     "click .new-listing": "submit",
     "click .my-image-thing": "pick"
-    // "change .my-image-thing": "updateImage"
   },
 
   installFilePicker: function(){
     var $filePickerInput = this.$(".my-image-thing")
-
     if (!$filePickerInput.is(':visible')) {
       return
     }
@@ -51,7 +43,6 @@ SurpriseBNBApp.Views.ListingForm = Backbone.View.extend({
     this.$('.image-group').append($input);
     var $image = $('<img src ='+ Blob.url + '>')
     $('div.image-div').append($image)
-    //create an image tag with src of Blob.url, append to page
   },
 
   updateImage: function (event) {
