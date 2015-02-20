@@ -26,7 +26,8 @@ SurpriseBNBApp.Views.ListingShow = Backbone.CompositeView.extend({
     setTimeout(function() {
       this.$("#mygallery").justifiedGallery({
         lastRow : 'justify',
-        rowHeight: "210",
+        rowHeight: "220",
+        maxHeight: "240"
       });
     }.bind(this), 10);
     this.onRender();
