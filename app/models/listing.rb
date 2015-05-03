@@ -53,7 +53,6 @@ class Listing < ActiveRecord::Base
       where("start_date <= ?", search_params[:start_date]).
       where("end_date >= ?", search_params[:end_date]).
       where("country in (?)", countries)
-      # where("user_id != ?", current_user.id)
   end
 
 end

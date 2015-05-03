@@ -19,6 +19,7 @@ SurpriseBNBApp.Views.CommentForm = Backbone.View.extend({
   submit: function(event) {
     event.preventDefault();
     var data = this.$el.serializeJSON();
+    debugger
     var that = this;
     this.model.set({username: SurpriseBNBApp.currentUserUsername})
     this.model.save(data, {
